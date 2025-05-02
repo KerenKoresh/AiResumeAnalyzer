@@ -6,6 +6,7 @@ from dotenv import load_dotenv
 
 load_dotenv()  # טוען משתני סביבה מקובץ .env (לשימוש מקומי)
 
+
 class BetterStackHandler(logging.Handler):
     def __init__(self, source_token, host):
         super().__init__()
@@ -62,6 +63,7 @@ def add_betterstack_handler():
 
 
 logger = logging.getLogger("AIResumeAnalyzer")
+
 
 def init_logger():
     # אם עדיין אין handlers, הוסף את ה-handler
