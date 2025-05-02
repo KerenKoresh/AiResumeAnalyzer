@@ -1,11 +1,11 @@
 import streamlit as st
 from src.match_analysis import analyze_match
-from utils.logging_utils import add_logtail_handler
+from utils.logging_utils import add_betterstack_handler  # עדכון כאן
 from utils.pdf_utils import extract_text_from_pdf
 from utils.email_utils import send_email  # ייבוא הפונקציה לשליחת המייל
 
 # אתחול הלוגר אם הוא לא כבר מאותחל
-add_logtail_handler()
+add_betterstack_handler()  # עדכון כאן
 
 # הגדרת Streamlit
 st.set_page_config(page_title="AI Resume Analyzer", layout="centered")

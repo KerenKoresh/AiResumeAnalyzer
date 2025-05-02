@@ -1,29 +1,12 @@
 import logging
-import os
+from utils.logging_utils import add_betterstack_handler
 
-from dotenv import load_dotenv
-import streamlit as st
-from logtail.handler import LogtailHandler
-
-load_dotenv()  # טוען את המשתנים מקובץ .env
-
-source_token = os.getenv("SOURCE_TOKEN")
-host = os.getenv("HOST")
-
-logger = logging.getLogger("ai_resume_analyzer")
+# קביעת level של הלוגר
+logger = logging.getLogger('betterstack_logger')
 logger.setLevel(logging.INFO)
 
-if 'logger_initialized' not in st.session_state:
-    if not any(isinstance(h, LogtailHandler) for h in logger.handlers):
-        handler = LogtailHandler(source_token=source_token, host=host)
-        logger.addHandler(handler)
-        logger.info("Logtail handler added")
-    else:
-        logger.info("Logtail handler already exists")
+# הוספת ה-handler של BetterStack
+add_betterstack_handler()
 
-    st.session_state['logger_initialized'] = True
-
-if 'log_message_logged' not in st.session_state:
-    logger.info("This is a log message.")
-    st.session_state['log_message_logged'] = True  # נסמן שהלוג בוצע
-
+# דוגמה לשימוש בלוגר
+logger.info("Logger initialized and BetterStack handler added.")
