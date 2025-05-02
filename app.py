@@ -10,18 +10,15 @@ if "initialized_ui" not in st.session_state:
     st.set_page_config(page_title="AI Resume Analyzer", layout="centered")
     st.session_state["initialized_ui"] = True
 
-# אתחול הלוגינג (לא משתמשים ב-session_state עבור הלוגר)
-if "logger_initialized" not in st.session_state:
-    st.session_state["logger_initialized"] = False
-
-if not st.session_state["logger_initialized"]:
-    # אתחול הלוגר
-    try:
+# אתחול הלוגינג - הימנע משימוש ב-session_state אם אין צורך
+try:
+    # אתחול הלוגר רק אם הוא לא מאותחל
+    if "logger_initialized" not in st.session_state:
         init_logger()
-        st.session_state["logger_initialized"] = True  # מבטיח שיתחיל רק פעם אחת
-    except Exception as e:
-        st.error(f"Error initializing logger: {str(e)}")
-        logging.error(f"Error initializing logger: {str(e)}")
+        st.session_state["logger_initialized"] = True
+except Exception as e:
+    st.error(f"Error initializing logger: {str(e)}")
+    logging.error(f"Error initializing logger: {str(e)}")
 
 # הגדרת Streamlit
 st.title("🧠 AI Resume Analyzer")
