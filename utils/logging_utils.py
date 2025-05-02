@@ -59,7 +59,7 @@ def add_betterstack_handler():
 
 
 def init_logger():
-    # ודא שה-`session_state` מאותחל אם לא קיים
+    # ודא שה-session_state מאותחל אם לא קיים
     if 'logger_initialized' not in st.session_state:
         st.session_state['logger_initialized'] = False
 
@@ -86,3 +86,10 @@ def init_logger():
     # סמן שהלוגר מאותחל
     st.session_state['logger_initialized'] = True
     logging.info("🔔 Logger initialized successfully.")
+
+# ודא שמבצעים את קריאת init_logger() פעם אחת, אם צריך
+if 'logger_initialized' not in st.session_state or not st.session_state['logger_initialized']:
+    init_logger()
+
+# הוסף את הסטייט הזה כדי לראות את המצב של session_state
+st.write(st.session_state)  # זה יציג את כל המידע שנשמר ב-session_state
