@@ -3,7 +3,8 @@ import logging
 import requests
 from dotenv import load_dotenv
 
-load_dotenv()  # זה יטען את משתני הסביבה מקובץ .env
+from dotenv import load_dotenv
+load_dotenv()
 
 
 class BetterStackHandler(logging.Handler):
