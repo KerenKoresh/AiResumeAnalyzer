@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="807201ae-ee64-4ca6-9628-3d677c5c95ca" name="Changes" comment="email fix">
-      <change afterPath="$PROJECT_DIR$/utils/temp/openai_util_backup.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/email_utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/email_utils.py" afterDir="false" />
-    </list>
+    <list default="true" id="807201ae-ee64-4ca6-9628-3d677c5c95ca" name="Changes" comment="email fix" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -96,14 +93,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1745908845465</updated>
-    </task>
-    <task id="LOCAL-00044" summary="init_logger">
-      <option name="closed" value="true" />
-      <created>1746179215706</created>
-      <option name="number" value="00044" />
-      <option name="presentableId" value="LOCAL-00044" />
-      <option name="project" value="LOCAL" />
-      <updated>1746179215706</updated>
     </task>
     <task id="LOCAL-00045" summary="init_logger">
       <option name="closed" value="true" />
@@ -489,7 +478,15 @@
       <option name="project" value="LOCAL" />
       <updated>1746190257630</updated>
     </task>
-    <option name="localTasksCounter" value="93" />
+    <task id="LOCAL-00093" summary="email fix">
+      <option name="closed" value="true" />
+      <created>1746190589832</created>
+      <option name="number" value="00093" />
+      <option name="presentableId" value="LOCAL-00093" />
+      <option name="project" value="LOCAL" />
+      <updated>1746190589832</updated>
+    </task>
+    <option name="localTasksCounter" value="94" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
