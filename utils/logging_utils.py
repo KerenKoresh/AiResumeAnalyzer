@@ -4,8 +4,6 @@ import os
 import streamlit as st
 from dotenv import load_dotenv
 
-from src.logger import logger
-
 load_dotenv()  # טוען משתני סביבה מקובץ .env (לשימוש מקומי)
 
 class BetterStackHandler(logging.Handler):
@@ -62,6 +60,8 @@ def add_betterstack_handler():
 
     logging.info(f"🔔 BetterStack handler added. Total handlers: {len(logger.handlers)}")
 
+
+logger = logging.getLogger()
 
 def init_logger():
     # אם ה-handler כבר קיים, אל תוסיף אותו שוב
