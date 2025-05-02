@@ -5,8 +5,8 @@ from utils.email_utils import send_email
 from utils.logging_utils import init_logger
 from utils.pdf_utils import extract_text_from_pdf
 
-# אתחול Streamlit UI (רק פעם אחת)
 st.set_page_config(page_title="AI Resume Analyzer", layout="centered")
+init_logger()
 
 st.title("🧠 AI Resume Analyzer")
 st.write("Upload a resume and enter a job description – and get a smart match analysis!")
