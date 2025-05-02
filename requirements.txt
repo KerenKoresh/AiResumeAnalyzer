@@ -4,3 +4,4 @@ openai~=0.28.1
 dotenv~=0.9.9
 python-dotenv~=1.1.0
 logtail~=1.0.1
+requests~=2.32.3

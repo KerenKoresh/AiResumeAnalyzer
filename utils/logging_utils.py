@@ -1,6 +1,22 @@
-import os
+import logging
+import requests
 
-from logtail.handler import LogtailHandler
+
+class LogtailHandler(logging.Handler):
+    def __init__(self, source_token, host):
+        super().__init__()
+        self.source_token = source_token
+        self.host = host
+        self.url = f'https://{self.host}/v1/logs'
+
+    def emit(self, record):
+        log_entry = self.format(record)
+        payload = {'source_token': self.source_token, 'log': log_entry}
+        requests.post(self.url, json=payload)
+
+
+# עכשיו תוכל להוסיף את ה-handler הזה
+import os
 
 from src.logger import logger
 
