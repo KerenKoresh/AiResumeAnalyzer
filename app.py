@@ -7,10 +7,12 @@ from utils.email_utils import send_email  # ייבוא הפונקציה לשלי
 # הגדרת Streamlit (רק פעם אחת)
 st.set_page_config(page_title="AI Resume Analyzer", layout="centered")
 
+
 @st.cache_resource
 def init_logger():
     add_betterstack_handler()
     return True
+
 
 init_logger()
 

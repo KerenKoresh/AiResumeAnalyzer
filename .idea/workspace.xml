@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="807201ae-ee64-4ca6-9628-3d677c5c95ca" name="Changes" comment="    logger.info(f&quot;Handlers count: {len(logger.handlers)}&quot;)">
-      <change beforePath="$PROJECT_DIR$/utils/logging_utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/logging_utils.py" afterDir="false" />
-    </list>
+    <list default="true" id="807201ae-ee64-4ca6-9628-3d677c5c95ca" name="Changes" comment="Streamlit setting" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -240,7 +238,31 @@
       <option name="project" value="LOCAL" />
       <updated>1746171760963</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="@st.cache_resource&#10;def init_logger():&#10;    add_betterstack_handler()&#10;    return True&#10;&#10;init_logger()">
+      <option name="closed" value="true" />
+      <created>1746171988108</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1746171988108</updated>
+    </task>
+    <task id="LOCAL-00020" summary="Streamlit setting">
+      <option name="closed" value="true" />
+      <created>1746172061980</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1746172061980</updated>
+    </task>
+    <task id="LOCAL-00021" summary="Streamlit setting">
+      <option name="closed" value="true" />
+      <created>1746172129028</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1746172129029</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -252,6 +274,8 @@
     <MESSAGE value="remove load_dotenv" />
     <MESSAGE value="avoid dup logs" />
     <MESSAGE value="    logger.info(f&quot;Handlers count: {len(logger.handlers)}&quot;)" />
-    <option name="LAST_COMMIT_MESSAGE" value="    logger.info(f&quot;Handlers count: {len(logger.handlers)}&quot;)" />
+    <MESSAGE value="@st.cache_resource&#10;def init_logger():&#10;    add_betterstack_handler()&#10;    return True&#10;&#10;init_logger()" />
+    <MESSAGE value="Streamlit setting" />
+    <option name="LAST_COMMIT_MESSAGE" value="Streamlit setting" />
   </component>
 </project>

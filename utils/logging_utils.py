@@ -2,6 +2,7 @@ import logging
 import os
 import requests
 
+
 class BetterStackHandler(logging.Handler):
     def __init__(self, source_token, host):
         super().__init__()
@@ -22,10 +23,12 @@ class BetterStackHandler(logging.Handler):
         except Exception as e:
             print(f"Failed to send log to BetterStack: {e}")
 
+
 _logger_initialized = False
 
+
 def add_betterstack_handler():
-    global _logger_initialized
+    global _logger_initialized  # יש להגדיר את המשתנה כגלובלי
     if _logger_initialized:
         return  # כבר אותחל
 
@@ -51,4 +54,4 @@ def add_betterstack_handler():
     logger.info("BetterStack handler added")
     logger.info(f"Handlers count after: {len(logger.handlers)}")
 
-    _logger_initialized = True
+    _logger_initialized = True  # עדכון המשתנה הגלובלי
