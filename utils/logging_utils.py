@@ -86,7 +86,3 @@ def init_logger():
     # סמן שהלוגר מאותחל
     st.session_state['logger_initialized'] = True
     logging.info("🔔 Logger initialized successfully.")
-
-
-# קריאה ל-init_logger() תתבצע אחרי האתחול של session_state
-init_logger()
