@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="807201ae-ee64-4ca6-9628-3d677c5c95ca" name="Changes" comment="fix BetterStackHandler">
-      <change beforePath="$PROJECT_DIR$/utils/logging_utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/logging_utils.py" afterDir="false" />
-    </list>
+    <list default="true" id="807201ae-ee64-4ca6-9628-3d677c5c95ca" name="Changes" comment="load_dotenv" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -168,7 +166,39 @@
       <option name="project" value="LOCAL" />
       <updated>1746170222197</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="fix BetterStackHandler">
+      <option name="closed" value="true" />
+      <created>1746170411049</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1746170411049</updated>
+    </task>
+    <task id="LOCAL-00011" summary="load_dotenv">
+      <option name="closed" value="true" />
+      <created>1746170544418</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1746170544418</updated>
+    </task>
+    <task id="LOCAL-00012" summary="load_dotenv">
+      <option name="closed" value="true" />
+      <created>1746170608738</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1746170608738</updated>
+    </task>
+    <task id="LOCAL-00013" summary="load_dotenv">
+      <option name="closed" value="true" />
+      <created>1746170675015</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1746170675015</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -176,6 +206,7 @@
     <MESSAGE value="fix logtail import" />
     <MESSAGE value="LogtailHandler" />
     <MESSAGE value="fix BetterStackHandler" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix BetterStackHandler" />
+    <MESSAGE value="load_dotenv" />
+    <option name="LAST_COMMIT_MESSAGE" value="load_dotenv" />
   </component>
 </project>
