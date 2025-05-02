@@ -9,25 +9,30 @@ logger = logging.getLogger('betterstack_logger')
 logger.setLevel(logging.INFO)
 
 
-class BetterStackHandler(logging.Handler):
-    def __init__(self, source_token, host):
-        super().__init__()
-        self.source_token = source_token
-        self.host = host
-        self.url = f'{self.host}/api/logs'
+class BetterStackHandler:
+    def __init__(self, url, token):
+        self.url = url
+        self.token = token
 
     def emit(self, record):
-        log_entry = self.format(record)
-        timestamp = datetime.utcnow().strftime('%Y-%m-%d %H:%M:%S UTC')
-        headers = {'Authorization': f'Bearer {self.source_token}', 'Content-Type': 'application/json'}
         payload = {
-            "dt": timestamp,
-            "message": log_entry
+            "dt": record.created,
+            "message": record.msg,
         }
-        response = requests.post(self.url, json=payload, headers=headers)
-        if response.status_code != 200:
-            print(f"Error sending log: {response.text}")
+        headers = {
+            "Authorization": f"Bearer {self.token}",
+            "Content-Type": "application/json"
+        }
 
+        # אם ה-URL לא כולל סכימה, נוסיף אותה
+        if not self.url.startswith(('http://', 'https://')):
+            self.url = 'https://' + self.url
+
+        try:
+            response = requests.post(self.url, json=payload, headers=headers)
+            response.raise_for_status()  # יזרוק חריגה אם הסטטוס לא 200
+        except requests.exceptions.RequestException as e:
+            print(f"Error sending log to BetterStack: {e}")
 
 def add_betterstack_handler():
     # הוספת ה-handler של BetterStack
