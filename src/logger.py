@@ -10,3 +10,7 @@ add_betterstack_handler()
 
 # דוגמה לשימוש בלוגר
 logger.info("Logger initialized and BetterStack handler added.")
+
+# בדוק את כל ה-handlers שהוספו
+for handler in logger.handlers:
+    print(f"Handler added: {handler}")

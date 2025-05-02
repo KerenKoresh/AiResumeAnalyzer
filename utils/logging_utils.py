@@ -37,13 +37,13 @@ def get_secret(key):
 def add_betterstack_handler():
     logger = logging.getLogger()
 
-    # הסרת כל הנדלרים – למנוע כפילויות
-    for handler in logger.handlers[:]:
-        logger.removeHandler(handler)
+    # בדיקה אם כבר קיים handler מסוג BetterStackHandler
+    if any(isinstance(handler, BetterStackHandler) for handler in logger.handlers):
+        print("BetterStack handler already added.")
+        return
 
-    # בדוק אם השרת נמצא במשתני סביבה
-    source_token = get_secret("SOURCE_TOKEN")
-    host = get_secret("HOST")
+    source_token = st.secrets.get("SOURCE_TOKEN")
+    host = st.secrets.get("HOST")
 
     if not source_token or not host:
         raise ValueError("SOURCE_TOKEN or HOST is not set in secrets or environment variables.")
@@ -53,7 +53,6 @@ def add_betterstack_handler():
 
     logger.setLevel(logging.INFO)
 
-    # יצירת ה handler
     handler = BetterStackHandler(source_token, host)
     formatter = logging.Formatter('%(asctime)s - %(levelname)s - %(message)s')
     handler.setFormatter(formatter)
@@ -61,8 +60,5 @@ def add_betterstack_handler():
 
     logger.info(f"🔔 BetterStack handler added. Total handlers: {len(logger.handlers)}")
 
-
-# אתחול רק אם לא נעשה אתחול קודם
-if "logger_initialized" not in st.session_state:
-    add_betterstack_handler()
-    st.session_state.logger_initialized = True
+    # הדפסת הנדלרים שנוספו
+    print(f"Total handlers after addition: {len(logger.handlers)}")
