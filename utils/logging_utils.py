@@ -54,8 +54,6 @@ def add_betterstack_handler():
     if not host.startswith("http"):
         raise ValueError("HOST must include schema, e.g., https://in.logs.betterstack.com")
 
-    logger.setLevel(logging.INFO)
-
     handler = BetterStackHandler(source_token, host)
     formatter = logging.Formatter('%(asctime)s - %(levelname)s - %(message)s')
     handler.setFormatter(formatter)
@@ -67,15 +65,19 @@ def add_betterstack_handler():
 def init_logger():
     logger = logging.getLogger("AIResumeAnalyzer")
 
-    # אם עדיין אין Handlers כלל, הוסף את ה-StreamHandler
-    if len(logger.handlers) == 0:
-        handler = logging.StreamHandler()
-        handler.setLevel(logging.INFO)
-        formatter = logging.Formatter('%(asctime)s - %(levelname)s - %(message)s')
-        handler.setFormatter(formatter)
-        logger.addHandler(handler)
-        logger.setLevel(logging.INFO)
-        logging.info("🔔 StreamHandler added.")
+    # ניקוי כל ה-handlers הקיימים (כדי למנוע כפילויות)
+    if len(logger.handlers) > 0:
+        logger.handlers.clear()
+        logging.info("🔔 Cleared existing handlers.")
+
+    # הוסף את ה-StreamHandler
+    handler = logging.StreamHandler()
+    handler.setLevel(logging.INFO)
+    formatter = logging.Formatter('%(asctime)s - %(levelname)s - %(message)s')
+    handler.setFormatter(formatter)
+    logger.addHandler(handler)
+    logger.setLevel(logging.INFO)
+    logging.info("🔔 StreamHandler added.")
 
     # הוסף את ה-handler של BetterStack אם הוא לא קיים כבר
     add_betterstack_handler()
