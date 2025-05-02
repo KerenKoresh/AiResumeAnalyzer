@@ -6,6 +6,7 @@ from dotenv import load_dotenv
 
 load_dotenv()  # טוען משתני סביבה מקובץ .env
 
+
 class BetterStackHandler(logging.Handler):
     def __init__(self, source_token, host):
         super().__init__()
@@ -33,9 +34,7 @@ def get_secret(key):
     return os.getenv(key)
 
 
-def add_betterstack_handler():
-    logger = logging.getLogger("AIResumeAnalyzer")
-
+def add_betterstack_handler(logger):
     # אם כבר יש BetterStack handler, אל נוסיף אחד נוסף
     if any(isinstance(handler, BetterStackHandler) for handler in logger.handlers):
         logging.info("🔔 BetterStack handler already exists.")
@@ -85,7 +84,7 @@ def init_logger():
     logging.info("✅ StreamHandler added.")
 
     # הוסף את ה-handler של BetterStack אם הוא לא קיים כבר
-    add_betterstack_handler()
+    add_betterstack_handler(logger)
 
     # סמן שהלוגר מאותחל
     st.session_state["logger_initialized"] = True
