@@ -1,44 +1,44 @@
 import logging
+import os
 import requests
-import streamlit as st
 
 class BetterStackHandler(logging.Handler):
-
-    def __init__(self, url, token):
+    def __init__(self, source_token, host):
         super().__init__()
-        self.url = url
-        self.token = token
+        self.source_token = source_token
+        self.host = host
 
     def emit(self, record):
-        payload = {
-            "dt": record.created,
-            "message": record.getMessage(),
-        }
-        headers = {
-            "Authorization": f"Bearer {self.token}",
-            "Content-Type": "application/json"
-        }
-
+        log_entry = self.format(record)
         try:
-            response = requests.post(self.url, json=payload, headers=headers)
-            response.raise_for_status()
-        except requests.exceptions.RequestException as e:
-            print(f"Error sending log to BetterStack: {e}")
-
+            requests.post(
+                self.host,
+                headers={
+                    "Content-Type": "application/json",
+                    "Authorization": f"Bearer {self.source_token}",
+                },
+                json={"message": log_entry}
+            )
+        except Exception as e:
+            print(f"Failed to send log to BetterStack: {e}")
 
 def add_betterstack_handler():
-    try:
-        source_token = st.secrets["SOURCE_TOKEN"]
-        host = st.secrets["HOST"]
-    except Exception as e:
-        raise ValueError("Missing SOURCE_TOKEN or HOST in Streamlit secrets.") from e
+    source_token = os.getenv("SOURCE_TOKEN")
+    host = os.getenv("HOST")
 
-    logger = logging.getLogger('betterstack_logger')
+    if not source_token or not host:
+        raise ValueError("SOURCE_TOKEN or HOST is not set in the environment variables.")
 
-    # בדיקה: אל תוסיף שוב אם כבר קיים
+    if not host.startswith("http"):
+        raise ValueError("HOST must include schema, e.g., https://in.logs.betterstack.com")
+
+    logger = logging.getLogger()
+    logger.setLevel(logging.INFO)
+
+    # 🛡 בדיקה אם כבר קיים BetterStackHandler
     if not any(isinstance(h, BetterStackHandler) for h in logger.handlers):
-        handler = BetterStackHandler(url=host, token=source_token)
+        handler = BetterStackHandler(source_token, host)
+        formatter = logging.Formatter('%(asctime)s - %(levelname)s - %(message)s')
+        handler.setFormatter(formatter)
         logger.addHandler(handler)
-        logger.setLevel(logging.INFO)
-
-    logger.info("BetterStack handler added")
+        logger.info("BetterStack handler added")
