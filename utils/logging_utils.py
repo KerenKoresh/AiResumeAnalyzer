@@ -6,7 +6,7 @@ from dotenv import load_dotenv
 
 load_dotenv()  # טוען משתני סביבה מקובץ .env (לשימוש מקומי)
 
-# סימון שה-logger כבר הוגדר
+# וודא שהמפתח "logger_initialized" קיים לפני גישה אליו
 if "logger_initialized" not in st.session_state:
     st.session_state.logger_initialized = False
 
