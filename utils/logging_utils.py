@@ -59,7 +59,7 @@ def add_betterstack_handler():
 
 
 def init_logger():
-    # ודא שהמאפיין קיים בתוך session_state לפני הגישה אליו
+    # אם session_state לא מאותחל, אתחיל אותו
     if "logger_initialized" not in st.session_state:
         st.session_state["logger_initialized"] = False
 
@@ -87,4 +87,6 @@ def init_logger():
     st.session_state["logger_initialized"] = True
     logging.info("🔔 Logger initialized successfully.")
 
-# עכשיו קריאה לפונקציה init_logger() תעבוד לאחר האתחול הנכון של session_state
+
+# קריאה ל-init_logger() תתבצע אחרי האתחול של session_state
+init_logger()
