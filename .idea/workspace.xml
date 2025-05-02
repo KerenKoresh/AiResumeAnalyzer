@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="807201ae-ee64-4ca6-9628-3d677c5c95ca" name="Changes" comment="comments in en" />
+    <list default="true" id="807201ae-ee64-4ca6-9628-3d677c5c95ca" name="Changes" comment="add logger">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/openai_utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/openai_utils.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -93,14 +96,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1745908845465</updated>
-    </task>
-    <task id="LOCAL-00039" summary="general fixes">
-      <option name="closed" value="true" />
-      <created>1746178551392</created>
-      <option name="number" value="00039" />
-      <option name="presentableId" value="LOCAL-00039" />
-      <option name="project" value="LOCAL" />
-      <updated>1746178551392</updated>
     </task>
     <task id="LOCAL-00040" summary="general fixes">
       <option name="closed" value="true" />
@@ -486,7 +481,15 @@
       <option name="project" value="LOCAL" />
       <updated>1746187347607</updated>
     </task>
-    <option name="localTasksCounter" value="88" />
+    <task id="LOCAL-00088" summary="add logger">
+      <option name="closed" value="true" />
+      <created>1746187732942</created>
+      <option name="number" value="00088" />
+      <option name="presentableId" value="LOCAL-00088" />
+      <option name="project" value="LOCAL" />
+      <updated>1746187732943</updated>
+    </task>
+    <option name="localTasksCounter" value="89" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -501,7 +504,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="fix logtail import" />
     <MESSAGE value="LogtailHandler" />
     <MESSAGE value="fix BetterStackHandler" />
     <MESSAGE value="load_dotenv" />
@@ -526,6 +528,7 @@
     <MESSAGE value="remove logging.getLogger().handlers.clear()" />
     <MESSAGE value="logger_initialized" />
     <MESSAGE value="comments in en" />
-    <option name="LAST_COMMIT_MESSAGE" value="comments in en" />
+    <MESSAGE value="add logger" />
+    <option name="LAST_COMMIT_MESSAGE" value="add logger" />
   </component>
 </project>
