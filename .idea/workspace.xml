@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="807201ae-ee64-4ca6-9628-3d677c5c95ca" name="Changes" comment="refactor app.py" />
+    <list default="true" id="807201ae-ee64-4ca6-9628-3d677c5c95ca" name="Changes" comment="add  LinkedIn" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -93,22 +93,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1745908845465</updated>
-    </task>
-    <task id="LOCAL-00048" summary="init_logger">
-      <option name="closed" value="true" />
-      <created>1746180102440</created>
-      <option name="number" value="00048" />
-      <option name="presentableId" value="LOCAL-00048" />
-      <option name="project" value="LOCAL" />
-      <updated>1746180102440</updated>
-    </task>
-    <task id="LOCAL-00049" summary="init_logger">
-      <option name="closed" value="true" />
-      <created>1746180451766</created>
-      <option name="number" value="00049" />
-      <option name="presentableId" value="LOCAL-00049" />
-      <option name="project" value="LOCAL" />
-      <updated>1746180451766</updated>
     </task>
     <task id="LOCAL-00050" summary="init_logger">
       <option name="closed" value="true" />
@@ -486,7 +470,23 @@
       <option name="project" value="LOCAL" />
       <updated>1746191713952</updated>
     </task>
-    <option name="localTasksCounter" value="97" />
+    <task id="LOCAL-00097" summary="add  LinkedIn">
+      <option name="closed" value="true" />
+      <created>1746191923508</created>
+      <option name="number" value="00097" />
+      <option name="presentableId" value="LOCAL-00097" />
+      <option name="project" value="LOCAL" />
+      <updated>1746191923508</updated>
+    </task>
+    <task id="LOCAL-00098" summary="add  LinkedIn">
+      <option name="closed" value="true" />
+      <created>1746192043372</created>
+      <option name="number" value="00098" />
+      <option name="presentableId" value="LOCAL-00098" />
+      <option name="project" value="LOCAL" />
+      <updated>1746192043372</updated>
+    </task>
+    <option name="localTasksCounter" value="99" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -501,7 +501,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Streamlit setting" />
     <MESSAGE value="_logger_initialized" />
     <MESSAGE value="st.secrets" />
     <MESSAGE value="fix logs" />
@@ -526,6 +525,7 @@
     <MESSAGE value="delete content from .env" />
     <MESSAGE value="email validation" />
     <MESSAGE value="refactor app.py" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactor app.py" />
+    <MESSAGE value="add  LinkedIn" />
+    <option name="LAST_COMMIT_MESSAGE" value="add  LinkedIn" />
   </component>
 </project>

@@ -1,23 +1,22 @@
-
-import requests
-from bs4 import BeautifulSoup
+from playwright.sync_api import sync_playwright
 
 
 def extract_job_description_from_linkedin(url: str) -> str:
-    """Fetches and extracts job description from a LinkedIn job post URL."""
-    headers = {
-        "User-Agent": "Mozilla/5.0"  # חשוב כדי שלא ייחסם
-    }
-    response = requests.get(url, headers=headers)
+    """Fetches and extracts job description from a LinkedIn job post URL using Playwright."""
+    with sync_playwright() as p:
+        # Start the browser and open a new page
+        browser = p.chromium.launch(headless=True)  # 'headless=True' means no GUI
+        page = browser.new_page()
 
-    if response.status_code != 200:
-        raise ValueError("Failed to fetch the LinkedIn page.")
+        # Go to the LinkedIn job post
+        page.goto(url)
 
-    soup = BeautifulSoup(response.text, "html.parser")
+        # Wait for the description to be loaded
+        page.wait_for_selector('div.description__text')
 
-    # זו דוגמה בסיסית – כדאי לבדוק את מבנה הדף הספציפי
-    description_div = soup.find("div", class_="description__text")
-    if not description_div:
-        raise ValueError("Could not locate job description on the page.")
+        # Extract the job description
+        description = page.query_selector('div.description__text').inner_text()
 
-    return description_div.get_text(strip=True)
+        browser.close()
+
+        return description.strip()
