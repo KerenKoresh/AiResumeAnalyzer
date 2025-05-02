@@ -1,7 +1,7 @@
 import logging
-import streamlit as st
 import requests
 import os
+import streamlit as st
 from dotenv import load_dotenv
 
 load_dotenv()  # טוען משתני סביבה מקובץ .env (לשימוש מקומי)
@@ -24,7 +24,7 @@ class BetterStackHandler(logging.Handler):
                 json={"message": log_entry}
             )
         except Exception as e:
-            print(f"Failed to send log to BetterStack: {e}")
+            logging.error(f"Failed to send log to BetterStack: {e}")
 
 
 def get_secret(key):
@@ -39,7 +39,7 @@ def add_betterstack_handler():
 
     # בדיקה אם כבר קיים handler מסוג BetterStackHandler
     if any(isinstance(handler, BetterStackHandler) for handler in logger.handlers):
-        print("BetterStack handler already added.")
+        logging.info("🔔 BetterStack handler already added.")
         return
 
     source_token = st.secrets.get("SOURCE_TOKEN")
@@ -58,7 +58,22 @@ def add_betterstack_handler():
     handler.setFormatter(formatter)
     logger.addHandler(handler)
 
-    logger.info(f"🔔 BetterStack handler added. Total handlers: {len(logger.handlers)}")
+    logging.info(f"🔔 BetterStack handler added. Total handlers: {len(logger.handlers)}")
 
-    # הדפסת הנדלרים שנוספו
-    print(f"Total handlers after addition: {len(logger.handlers)}")
+
+def init_logger():
+    # אתחול של הלוגר אם הוא לא הותקן קודם
+    if "logger_initialized" not in st.session_state:
+        logging.info("🔔 Logging test: logger initialized")
+
+        # בדיקה אם ה-handler של BetterStack כבר הוסף
+        if not any(isinstance(handler, logging.Handler) and "BetterStack" in str(handler) for handler in
+                   logging.getLogger().handlers):
+            add_betterstack_handler()
+            logging.info("🔔 BetterStack handler added.")
+        else:
+            logging.info("🔔 BetterStack handler already exists.")
+
+        st.session_state.logger_initialized = True
+    else:
+        logging.debug("🔔 Logger already initialized previously.")

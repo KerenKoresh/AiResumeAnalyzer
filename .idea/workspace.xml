@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="807201ae-ee64-4ca6-9628-3d677c5c95ca" name="Changes" comment="avoid dup logs" />
+    <list default="true" id="807201ae-ee64-4ca6-9628-3d677c5c95ca" name="Changes" comment="םfix logs">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -342,7 +345,47 @@
       <option name="project" value="LOCAL" />
       <updated>1746175907710</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="avoid dup logs">
+      <option name="closed" value="true" />
+      <created>1746176172656</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1746176172656</updated>
+    </task>
+    <task id="LOCAL-00033" summary="avoid dup logs">
+      <option name="closed" value="true" />
+      <created>1746176330605</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1746176330605</updated>
+    </task>
+    <task id="LOCAL-00034" summary="avoid dup logs">
+      <option name="closed" value="true" />
+      <created>1746176567860</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1746176567860</updated>
+    </task>
+    <task id="LOCAL-00035" summary="add logs">
+      <option name="closed" value="true" />
+      <created>1746177156259</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1746177156259</updated>
+    </task>
+    <task id="LOCAL-00036" summary="םfix logs">
+      <option name="closed" value="true" />
+      <created>1746177440617</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1746177440617</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -358,8 +401,9 @@
     <MESSAGE value="_logger_initialized" />
     <MESSAGE value="st.secrets" />
     <MESSAGE value="fix logs" />
-    <MESSAGE value="add logs" />
     <MESSAGE value="avoid dup logs" />
-    <option name="LAST_COMMIT_MESSAGE" value="avoid dup logs" />
+    <MESSAGE value="add logs" />
+    <MESSAGE value="םfix logs" />
+    <option name="LAST_COMMIT_MESSAGE" value="םfix logs" />
   </component>
 </project>

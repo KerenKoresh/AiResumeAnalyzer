@@ -1,31 +1,9 @@
 import logging
 import streamlit as st
-
 from src.match_analysis import analyze_match
 from utils.email_utils import send_email
-from utils.logging_utils import add_betterstack_handler  # עדכון כאן
+from utils.logging_utils import init_logger  # שינוי כאן
 from utils.pdf_utils import extract_text_from_pdf
-
-
-def init_logger():
-    # אתחול של הלוגר אם הוא לא הותקן קודם
-    if "logger_initialized" not in st.session_state:
-        logging.info("🔔 Logging test: logger initialized")
-
-        # בדיקה אם ה-handler של BetterStack כבר הוסף
-        if not any(isinstance(handler, logging.Handler) and "BetterStack" in str(handler) for handler in
-                   logging.getLogger().handlers):
-            add_betterstack_handler()
-            logging.info("🔔 BetterStack handler added.")
-        else:
-            logging.info("🔔 BetterStack handler already exists.")
-
-        st.session_state.logger_initialized = True
-    else:
-        logging.debug("🔔 Logger already initialized previously.")
-
-    return True
-
 
 # אתחול הלוגינג
 init_logger()

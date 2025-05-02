@@ -1,6 +1,7 @@
 import smtplib
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
+import logging
 
 def send_email(subject, body, to_email):
     from_email = "your-email@gmail.com"  # כתובת המייל שלך
@@ -24,6 +25,7 @@ def send_email(subject, body, to_email):
 
         server.sendmail(from_email, to_email, msg.as_string())
         server.quit()
-        print("Email sent successfully!")
+        logging.info(f"🔔 Email sent successfully to {to_email}")
     except Exception as e:
+        logging.error(f"Error sending email: {e}")
         print(f"Failed to send email: {e}")

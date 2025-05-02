@@ -1,6 +1,6 @@
 import json
 import os
-
+import logging
 
 def read_previous_data(file_path='previous_data.json'):
     if os.path.exists(file_path):
@@ -10,8 +10,13 @@ def read_previous_data(file_path='previous_data.json'):
 
 
 def save_previous_data(resume_text, job_description, file_path='previous_data.json'):
-    with open(file_path, 'w') as file:
-        json.dump({
-            'resume_text': resume_text,
-            'job_description': job_description
-        }, file)
+    try:
+        with open(file_path, 'w') as file:
+            json.dump({
+                'resume_text': resume_text,
+                'job_description': job_description
+            }, file)
+        logging.info("🔔 Previous data saved successfully.")
+    except Exception as e:
+        logging.error(f"Error saving previous data: {e}")
+        raise e
