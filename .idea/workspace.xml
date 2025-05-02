@@ -4,8 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="807201ae-ee64-4ca6-9628-3d677c5c95ca" name="Changes" comment="_logger_initialized">
+    <list default="true" id="807201ae-ee64-4ca6-9628-3d677c5c95ca" name="Changes" comment="st.secrets">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/logging_utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/logging_utils.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -272,7 +274,31 @@
       <option name="project" value="LOCAL" />
       <updated>1746172591924</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="st.secrets">
+      <option name="closed" value="true" />
+      <created>1746173218139</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1746173218139</updated>
+    </task>
+    <task id="LOCAL-00024" summary="st.secrets">
+      <option name="closed" value="true" />
+      <created>1746173338007</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1746173338007</updated>
+    </task>
+    <task id="LOCAL-00025" summary="st.secrets">
+      <option name="closed" value="true" />
+      <created>1746173390322</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1746173390322</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -287,6 +313,7 @@
     <MESSAGE value="@st.cache_resource&#10;def init_logger():&#10;    add_betterstack_handler()&#10;    return True&#10;&#10;init_logger()" />
     <MESSAGE value="Streamlit setting" />
     <MESSAGE value="_logger_initialized" />
-    <option name="LAST_COMMIT_MESSAGE" value="_logger_initialized" />
+    <MESSAGE value="st.secrets" />
+    <option name="LAST_COMMIT_MESSAGE" value="st.secrets" />
   </component>
 </project>

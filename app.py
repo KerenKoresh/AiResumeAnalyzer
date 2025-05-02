@@ -1,3 +1,5 @@
+import logging
+
 import streamlit as st
 from src.match_analysis import analyze_match
 from utils.logging_utils import add_betterstack_handler  # עדכון כאן
@@ -7,9 +9,12 @@ from utils.email_utils import send_email  # ייבוא הפונקציה לשלי
 # הגדרת Streamlit (רק פעם אחת)
 st.set_page_config(page_title="AI Resume Analyzer", layout="centered")
 
+
 def init_logger():
+    logging.info("🔔 Logging test: logger initialized")
     add_betterstack_handler()
     return True
+
 
 # אתחול הלוגינג
 init_logger()
@@ -36,7 +41,8 @@ if st.button("🔍 Analyze match"):
                 resume_text = extract_text_from_pdf(uploaded_file)
 
                 if not resume_text.strip():
-                    st.error("No text found in the PDF file. Please ensure the file is valid and not scanned as an image.")
+                    st.error(
+                        "No text found in the PDF file. Please ensure the file is valid and not scanned as an image.")
                 else:
                     # ניתוח חדש
                     result = analyze_match(resume_text, job_description)
