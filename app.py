@@ -6,7 +6,12 @@ from utils.logging_utils import init_logger  # שינוי כאן
 from utils.pdf_utils import extract_text_from_pdf
 
 # אתחול הלוגינג
-init_logger()
+if "logger_initialized" not in st.session_state:
+    st.session_state.logger_initialized = False
+
+if not st.session_state.logger_initialized:
+    init_logger()
+    st.session_state.logger_initialized = True
 
 # הגדרת Streamlit (רק פעם אחת)
 if "initialized_ui" not in st.session_state:
