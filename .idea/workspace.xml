@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="807201ae-ee64-4ca6-9628-3d677c5c95ca" name="Changes" comment="st.secrets">
-      <change beforePath="$PROJECT_DIR$/utils/logging_utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/logging_utils.py" afterDir="false" />
-    </list>
+    <list default="true" id="807201ae-ee64-4ca6-9628-3d677c5c95ca" name="Changes" comment="st.secrets" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -304,7 +302,15 @@
       <option name="project" value="LOCAL" />
       <updated>1746174576609</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="st.secrets">
+      <option name="closed" value="true" />
+      <created>1746174874760</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1746174874760</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">

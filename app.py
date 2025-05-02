@@ -1,5 +1,4 @@
 import logging
-
 import streamlit as st
 from src.match_analysis import analyze_match
 from utils.logging_utils import add_betterstack_handler  # עדכון כאן
@@ -11,8 +10,11 @@ st.set_page_config(page_title="AI Resume Analyzer", layout="centered")
 
 
 def init_logger():
-    logging.info("🔔 Logging test: logger initialized")
-    add_betterstack_handler()
+    # אתחול של הלוגר אם הוא לא הותקן קודם
+    if "logger_initialized" not in st.session_state:
+        logging.info("🔔 Logging test: logger initialized")
+        add_betterstack_handler()
+        st.session_state.logger_initialized = True
     return True
 
 
