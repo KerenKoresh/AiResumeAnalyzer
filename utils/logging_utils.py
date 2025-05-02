@@ -1,5 +1,7 @@
 import os
-from logtail import LogtailHandler
+
+from logtail.handler import LogtailHandler
+
 from src.logger import logger
 
 
