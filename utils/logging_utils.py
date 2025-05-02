@@ -1,16 +1,11 @@
 import os
-import requests
 import logging
-
-from datetime import datetime
-
-# הגדרת logger
-logger = logging.getLogger('betterstack_logger')
-logger.setLevel(logging.INFO)
+import requests
 
 
-class BetterStackHandler:
+class BetterStackHandler(logging.Handler):
     def __init__(self, url, token):
+        super().__init__()
         self.url = url
         self.token = token
 
@@ -34,17 +29,20 @@ class BetterStackHandler:
         except requests.exceptions.RequestException as e:
             print(f"Error sending log to BetterStack: {e}")
 
-def add_betterstack_handler():
-    # הוספת ה-handler של BetterStack
-    logger.handlers = [h for h in logger.handlers if not isinstance(h, BetterStackHandler)]
 
+def add_betterstack_handler():
     source_token = os.getenv("SOURCE_TOKEN")
     host = os.getenv("HOST")
 
-    handler = BetterStackHandler(source_token=source_token, host=host)
+    # ודא שהמשתנים קיימים
+    if not source_token or not host:
+        raise ValueError("SOURCE_TOKEN or HOST is not set in the environment variables.")
+
+    handler = BetterStackHandler(url=host, token=source_token)
+
+    # קבלת הלוגר מהמקום שבו הוא מוגדר
+    logger = logging.getLogger('betterstack_logger')
     logger.addHandler(handler)
+    logger.setLevel(logging.INFO)
+
     logger.info("BetterStack handler added")
-
-
-# הוספת ה-handler עם הקריאה לפונקציה
-add_betterstack_handler()
