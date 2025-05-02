@@ -22,7 +22,13 @@ class BetterStackHandler(logging.Handler):
         except Exception as e:
             print(f"Failed to send log to BetterStack: {e}")
 
+_logger_initialized = False
+
 def add_betterstack_handler():
+    global _logger_initialized
+    if _logger_initialized:
+        return  # כבר אותחל
+
     source_token = os.getenv("SOURCE_TOKEN")
     host = os.getenv("HOST")
 
@@ -35,12 +41,14 @@ def add_betterstack_handler():
     logger = logging.getLogger()
     logger.setLevel(logging.INFO)
 
-    # לוג של מספר ה-handlers הנוכחיים
-    logger.info(f"Handlers count: {len(logger.handlers)}")
+    logger.info(f"Handlers count before: {len(logger.handlers)}")
 
-    if not any(isinstance(h, BetterStackHandler) for h in logger.handlers):
-        handler = BetterStackHandler(source_token, host)
-        formatter = logging.Formatter('%(asctime)s - %(levelname)s - %(message)s')
-        handler.setFormatter(formatter)
-        logger.addHandler(handler)
-        logger.info("BetterStack handler added")
+    handler = BetterStackHandler(source_token, host)
+    formatter = logging.Formatter('%(asctime)s - %(levelname)s - %(message)s')
+    handler.setFormatter(formatter)
+    logger.addHandler(handler)
+
+    logger.info("BetterStack handler added")
+    logger.info(f"Handlers count after: {len(logger.handlers)}")
+
+    _logger_initialized = True

@@ -4,8 +4,14 @@ from utils.logging_utils import add_betterstack_handler  # עדכון כאן
 from utils.pdf_utils import extract_text_from_pdf
 from utils.email_utils import send_email  # ייבוא הפונקציה לשליחת המייל
 
-# אתחול הלוגר אם הוא לא כבר מאותחל
-add_betterstack_handler()  # עדכון כאן
+
+@st.cache_resource
+def init_logger():
+    add_betterstack_handler()
+    return True
+
+
+init_logger()
 
 # הגדרת Streamlit
 st.set_page_config(page_title="AI Resume Analyzer", layout="centered")
@@ -30,7 +36,8 @@ if st.button("🔍 Analyze match"):
                 resume_text = extract_text_from_pdf(uploaded_file)
 
                 if not resume_text.strip():
-                    st.error("No text found in the PDF file. Please ensure the file is valid and not scanned as an image.")
+                    st.error(
+                        "No text found in the PDF file. Please ensure the file is valid and not scanned as an image.")
                 else:
                     # ניתוח חדש
                     result = analyze_match(resume_text, job_description)

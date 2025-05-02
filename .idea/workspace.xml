@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="807201ae-ee64-4ca6-9628-3d677c5c95ca" name="Changes" comment="remove load_dotenv">
+    <list default="true" id="807201ae-ee64-4ca6-9628-3d677c5c95ca" name="Changes" comment="    logger.info(f&quot;Handlers count: {len(logger.handlers)}&quot;)">
       <change beforePath="$PROJECT_DIR$/utils/logging_utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/logging_utils.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -224,7 +224,23 @@
       <option name="project" value="LOCAL" />
       <updated>1746171181404</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="avoid dup logs">
+      <option name="closed" value="true" />
+      <created>1746171557102</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1746171557102</updated>
+    </task>
+    <task id="LOCAL-00018" summary="    logger.info(f&quot;Handlers count: {len(logger.handlers)}&quot;)">
+      <option name="closed" value="true" />
+      <created>1746171760963</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1746171760963</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -234,6 +250,8 @@
     <MESSAGE value="fix BetterStackHandler" />
     <MESSAGE value="load_dotenv" />
     <MESSAGE value="remove load_dotenv" />
-    <option name="LAST_COMMIT_MESSAGE" value="remove load_dotenv" />
+    <MESSAGE value="avoid dup logs" />
+    <MESSAGE value="    logger.info(f&quot;Handlers count: {len(logger.handlers)}&quot;)" />
+    <option name="LAST_COMMIT_MESSAGE" value="    logger.info(f&quot;Handlers count: {len(logger.handlers)}&quot;)" />
   </component>
 </project>
