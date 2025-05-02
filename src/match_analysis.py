@@ -13,4 +13,4 @@ def analyze_match(resume_text, job_description):
         return result
     except Exception as e:
         logging.error(f"Error during match analysis: {e}")
-        raise e  # חוזר עם שגיאה למעלה
+        raise e

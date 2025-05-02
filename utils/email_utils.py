@@ -2,11 +2,13 @@ import smtplib
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 import logging
+
 logger = logging.getLogger("AIResumeAnalyzer")
 
+
 def send_email(subject, body, to_email):
-    from_email = "your-email@gmail.com"  # כתובת המייל שלך
-    from_password = "your-email-password"  # סיסמא של המייל שלך
+    from_email = "ai.resume.analyzer.ko@gmail.com"  # כתובת המייל שלך
+    from_password = "icos ofqm bvqd iwdz"  # סיסמא של המייל שלך
 
     # הגדרת השרת של Gmail
     server = smtplib.SMTP('smtp.gmail.com', 587)

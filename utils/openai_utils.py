@@ -6,9 +6,10 @@ import streamlit as st
 
 load_dotenv()
 
-#openai.api_key = os.getenv("OPENAI_API_KEY")
 openai.api_key = st.secrets["OPENAI_API_KEY"]
 logger = logging.getLogger("AIResumeAnalyzer")
+
+
 def load_system_prompt():
     current_dir = os.path.dirname(__file__)
     file_path = os.path.join(current_dir, "cv_analyzer_prompt.txt")
@@ -23,7 +24,7 @@ def get_match_analysis(resume_text, job_description):
 
     try:
         response = openai.ChatCompletion.create(
-            model="gpt-4",  # מומלץ GPT-4 לפרומפטים מורכבים
+            model="gpt-4",
             messages=[
                 {"role": "system", "content": system_prompt},
                 {"role": "user", "content": user_input}

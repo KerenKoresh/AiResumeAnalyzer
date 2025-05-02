@@ -4,7 +4,7 @@ import os
 import streamlit as st
 from dotenv import load_dotenv
 
-load_dotenv()  # טוען משתני סביבה מקובץ .env
+load_dotenv()
 logger = logging.getLogger("AIResumeAnalyzer")
 
 
