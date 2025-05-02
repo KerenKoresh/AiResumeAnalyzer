@@ -6,9 +6,6 @@ from dotenv import load_dotenv
 
 load_dotenv()  # טוען משתני סביבה מקובץ .env
 
-# ודא שהלוגר לא שולח ל-root logger
-logging.getLogger().handlers.clear()
-
 class BetterStackHandler(logging.Handler):
     def __init__(self, source_token, host):
         super().__init__()
