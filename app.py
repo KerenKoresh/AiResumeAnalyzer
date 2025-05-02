@@ -13,7 +13,15 @@ def init_logger():
     # אתחול של הלוגר אם הוא לא הותקן קודם
     if "logger_initialized" not in st.session_state:
         logging.info("🔔 Logging test: logger initialized")
-        add_betterstack_handler()
+
+        # בדיקה אם ה-handler של BetterStack כבר הוסף
+        if not any(isinstance(handler, logging.Handler) and "BetterStack" in str(handler) for handler in
+                   logging.getLogger().handlers):
+            add_betterstack_handler()
+            logging.info("🔔 BetterStack handler added.")
+        else:
+            logging.info("🔔 BetterStack handler already exists.")
+
         st.session_state.logger_initialized = True
     return True
 
