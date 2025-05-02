@@ -59,12 +59,11 @@ def add_betterstack_handler():
 
 
 def init_logger():
-    # ודא ש־session_state מאותחל
-    if "logger_initialized" not in st.session_state:
-        st.session_state["logger_initialized"] = False
+    # ודא שהמפתח 'logger_initialized' קיים ב-session_state או יצר אותו
+    st.session_state.setdefault("logger_initialized", False)
 
     # אם הלוגר כבר מאותחל, אין צורך לאתחל אותו שוב
-    if getattr(st.session_state, "logger_initialized", False):
+    if st.session_state["logger_initialized"]:
         logging.info("🔔 Logger is already initialized.")
         return
 
@@ -82,6 +81,7 @@ def init_logger():
     # הוסף את ה-handler של BetterStack אם הוא לא קיים כבר
     add_betterstack_handler()
 
+    # סמן שהלוגר מאותחל
     st.session_state["logger_initialized"] = True
     logging.info("🔔 Logger initialized successfully.")
 
