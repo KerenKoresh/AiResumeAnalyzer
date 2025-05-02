@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="807201ae-ee64-4ca6-9628-3d677c5c95ca" name="Changes" comment="email validation" />
+    <list default="true" id="807201ae-ee64-4ca6-9628-3d677c5c95ca" name="Changes" comment="refactor app.py" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -93,14 +93,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1745908845465</updated>
-    </task>
-    <task id="LOCAL-00047" summary="init_logger">
-      <option name="closed" value="true" />
-      <created>1746180014938</created>
-      <option name="number" value="00047" />
-      <option name="presentableId" value="LOCAL-00047" />
-      <option name="project" value="LOCAL" />
-      <updated>1746180014938</updated>
     </task>
     <task id="LOCAL-00048" summary="init_logger">
       <option name="closed" value="true" />
@@ -486,7 +478,15 @@
       <option name="project" value="LOCAL" />
       <updated>1746191510673</updated>
     </task>
-    <option name="localTasksCounter" value="96" />
+    <task id="LOCAL-00096" summary="refactor app.py">
+      <option name="closed" value="true" />
+      <created>1746191713952</created>
+      <option name="number" value="00096" />
+      <option name="presentableId" value="LOCAL-00096" />
+      <option name="project" value="LOCAL" />
+      <updated>1746191713952</updated>
+    </task>
+    <option name="localTasksCounter" value="97" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -501,7 +501,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="@st.cache_resource&#10;def init_logger():&#10;    add_betterstack_handler()&#10;    return True&#10;&#10;init_logger()" />
     <MESSAGE value="Streamlit setting" />
     <MESSAGE value="_logger_initialized" />
     <MESSAGE value="st.secrets" />
@@ -526,6 +525,7 @@
     <MESSAGE value="email fix" />
     <MESSAGE value="delete content from .env" />
     <MESSAGE value="email validation" />
-    <option name="LAST_COMMIT_MESSAGE" value="email validation" />
+    <MESSAGE value="refactor app.py" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactor app.py" />
   </component>
 </project>
