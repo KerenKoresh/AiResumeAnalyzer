@@ -21,6 +21,10 @@ def init_logger():
             logging.info("🔔 BetterStack handler already exists.")
 
         st.session_state.logger_initialized = True
+    # לא שולחים את ההודעה שוב אם הלוגר כבר אתחול
+    else:
+        logging.debug("🔔 Logger already initialized previously.")
+
     return True
 
 
