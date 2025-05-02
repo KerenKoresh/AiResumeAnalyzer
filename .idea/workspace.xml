@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="807201ae-ee64-4ca6-9628-3d677c5c95ca" name="Changes" comment="load_dotenv">
+    <list default="true" id="807201ae-ee64-4ca6-9628-3d677c5c95ca" name="Changes" comment="remove load_dotenv">
       <change beforePath="$PROJECT_DIR$/utils/logging_utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/logging_utils.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -208,7 +208,23 @@
       <option name="project" value="LOCAL" />
       <updated>1746170790980</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="remove load_dotenv">
+      <option name="closed" value="true" />
+      <created>1746171069491</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1746171069491</updated>
+    </task>
+    <task id="LOCAL-00016" summary="remove load_dotenv">
+      <option name="closed" value="true" />
+      <created>1746171181404</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1746171181404</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -217,6 +233,7 @@
     <MESSAGE value="LogtailHandler" />
     <MESSAGE value="fix BetterStackHandler" />
     <MESSAGE value="load_dotenv" />
-    <option name="LAST_COMMIT_MESSAGE" value="load_dotenv" />
+    <MESSAGE value="remove load_dotenv" />
+    <option name="LAST_COMMIT_MESSAGE" value="remove load_dotenv" />
   </component>
 </project>

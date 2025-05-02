@@ -35,7 +35,9 @@ def add_betterstack_handler():
     logger = logging.getLogger()
     logger.setLevel(logging.INFO)
 
-    # 🛡 בדיקה אם כבר קיים BetterStackHandler
+    # לוג של מספר ה-handlers הנוכחיים
+    logger.info(f"Handlers count: {len(logger.handlers)}")
+
     if not any(isinstance(h, BetterStackHandler) for h in logger.handlers):
         handler = BetterStackHandler(source_token, host)
         formatter = logging.Formatter('%(asctime)s - %(levelname)s - %(message)s')
