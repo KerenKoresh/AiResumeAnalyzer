@@ -38,12 +38,15 @@ def get_secret(key):
 
 
 def add_betterstack_handler():
-    global _logger_initialized
-    if _logger_initialized:
-        return
+    logger = logging.getLogger()
 
-    source_token = get_secret("SOURCE_TOKEN")
-    host = get_secret("HOST")
+    # הסרת הנדלרים כפולים מסוג BetterStackHandler
+    for handler in logger.handlers[:]:
+        if isinstance(handler, BetterStackHandler):
+            logger.removeHandler(handler)
+
+    source_token = st.secrets["SOURCE_TOKEN"]
+    host = st.secrets["HOST"]
 
     if not source_token or not host:
         raise ValueError("SOURCE_TOKEN or HOST is not set in secrets or environment variables.")
@@ -51,7 +54,6 @@ def add_betterstack_handler():
     if not host.startswith("http"):
         raise ValueError("HOST must include schema, e.g., https://in.logs.betterstack.com")
 
-    logger = logging.getLogger()
     logger.setLevel(logging.INFO)
 
     handler = BetterStackHandler(source_token, host)
@@ -59,6 +61,4 @@ def add_betterstack_handler():
     handler.setFormatter(formatter)
     logger.addHandler(handler)
 
-    logger.info("✅ BetterStack handler added successfully")
-
-    _logger_initialized = True
+    logger.info(f"🔔 BetterStack handler added. Total handlers: {len(logger.handlers)}")
