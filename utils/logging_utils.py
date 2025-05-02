@@ -4,6 +4,8 @@ import os
 import streamlit as st
 from dotenv import load_dotenv
 
+from src.logger import logger
+
 load_dotenv()  # טוען משתני סביבה מקובץ .env (לשימוש מקומי)
 
 class BetterStackHandler(logging.Handler):
@@ -61,21 +63,16 @@ def add_betterstack_handler():
     logging.info(f"🔔 BetterStack handler added. Total handlers: {len(logger.handlers)}")
 
 
-import logging
-import streamlit as st
-
-
 def init_logger():
-    # אתחול של הלוגר אם הוא לא הותקן קודם
-    if "logger_initialized" not in st.session_state:
-        # בדוק אם ה-handler כבר קיים
-        if not any(isinstance(handler, BetterStackHandler) for handler in logging.getLogger().handlers):
-            add_betterstack_handler()  # הוסף את ה-handler אם לא קיים
-            logging.info("🔔 BetterStack handler added.")
-        else:
-            logging.info("🔔 BetterStack handler already exists.")
-
-        # שמור במשתנה של session_state
-        st.session_state.logger_initialized = True
+    # אם ה-handler כבר קיים, אל תוסיף אותו שוב
+    if not any(isinstance(handler, logging.StreamHandler) for handler in logger.handlers):
+        # הוסף את ה-handler רק אם אין כבר אחד
+        handler = logging.StreamHandler()
+        handler.setLevel(logging.INFO)
+        formatter = logging.Formatter('%(asctime)s - %(levelname)s - %(message)s')
+        handler.setFormatter(formatter)
+        logger.addHandler(handler)
+        logger.setLevel(logging.INFO)
+        logger.info("🔔 BetterStack handler added.")
     else:
-        logging.debug("🔔 Logger already initialized previously.")
+        logger.info("🔔 BetterStack handler already exists.")
