@@ -7,7 +7,8 @@ from dotenv import load_dotenv
 load_dotenv()  # טוען משתני סביבה מקובץ .env (לשימוש מקומי)
 
 # סימון שה-logger כבר הוגדר
-logger_initialized = False
+if "logger_initialized" not in st.session_state:
+    st.session_state.logger_initialized = False
 
 class BetterStackHandler(logging.Handler):
     def __init__(self, source_token, host):
@@ -37,9 +38,7 @@ def get_secret(key):
 
 
 def add_betterstack_handler():
-    global logger_initialized  # השתמש במשתנה גלובלי
-
-    if logger_initialized:  # אם ה-logger כבר הוגדר
+    if st.session_state.logger_initialized:
         logging.info("🔔 BetterStack handler already exists.")
         return
 
@@ -60,15 +59,13 @@ def add_betterstack_handler():
     handler.setFormatter(formatter)
     logger.addHandler(handler)
 
-    logger_initialized = True  # עדכון המצב שה-logger הוגדר
+    st.session_state.logger_initialized = True  # עדכון המצב שה-logger הוגדר
     logging.info(f"🔔 BetterStack handler added. Total handlers: {len(logger.handlers)}")
 
 
 def init_logger():
-    global logger_initialized  # השתמש במשתנה גלובלי
-
     # אם ה-logger לא הוגדר עדיין, הוסף את ה-stream handler
-    if not logger_initialized:
+    if not st.session_state.logger_initialized:
         logger = logging.getLogger("AIResumeAnalyzer")
 
         # הוסף את ה-StreamHandler אם הוא לא קיים
