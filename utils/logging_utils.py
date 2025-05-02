@@ -1,13 +1,6 @@
 import logging
-import os
-
 import requests
-
 import streamlit as st
-
-source_token = st.secrets["SOURCE_TOKEN"]
-host = st.secrets["HOST"]
-
 
 class BetterStackHandler(logging.Handler):
 
@@ -19,15 +12,12 @@ class BetterStackHandler(logging.Handler):
     def emit(self, record):
         payload = {
             "dt": record.created,
-            "message": record.msg,
+            "message": record.getMessage(),
         }
         headers = {
             "Authorization": f"Bearer {self.token}",
             "Content-Type": "application/json"
         }
-
-        if not self.url.startswith(('http://', 'https://')):
-            self.url = 'https://' + self.url
 
         try:
             response = requests.post(self.url, json=payload, headers=headers)
@@ -37,13 +27,18 @@ class BetterStackHandler(logging.Handler):
 
 
 def add_betterstack_handler():
-    if not source_token or not host:
-        raise ValueError("SOURCE_TOKEN or HOST is not set in the environment variables.")
-
-    handler = BetterStackHandler(url=host, token=source_token)
+    try:
+        source_token = st.secrets["SOURCE_TOKEN"]
+        host = st.secrets["HOST"]
+    except Exception as e:
+        raise ValueError("Missing SOURCE_TOKEN or HOST in Streamlit secrets.") from e
 
     logger = logging.getLogger('betterstack_logger')
-    logger.addHandler(handler)
-    logger.setLevel(logging.INFO)
+
+    # בדיקה: אל תוסיף שוב אם כבר קיים
+    if not any(isinstance(h, BetterStackHandler) for h in logger.handlers):
+        handler = BetterStackHandler(url=host, token=source_token)
+        logger.addHandler(handler)
+        logger.setLevel(logging.INFO)
 
     logger.info("BetterStack handler added")
