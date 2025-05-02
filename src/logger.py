@@ -2,8 +2,9 @@ import logging
 import os
 
 from dotenv import load_dotenv
-from logtail import LogtailHandler
 import streamlit as st
+from logtail.handler import LogtailHandler
+
 load_dotenv()  # טוען את המשתנים מקובץ .env
 
 source_token = os.getenv("SOURCE_TOKEN")
