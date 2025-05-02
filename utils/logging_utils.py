@@ -6,6 +6,9 @@ from dotenv import load_dotenv
 
 load_dotenv()  # טוען משתני סביבה מקובץ .env (לשימוש מקומי)
 
+# סימון הגדרת ה-handler
+handler_added = False
+
 
 class BetterStackHandler(logging.Handler):
     def __init__(self, source_token, host):
@@ -35,10 +38,11 @@ def get_secret(key):
 
 
 def add_betterstack_handler():
-    logger = logging.getLogger("AIResumeAnalyzer")  # הגדרת ה-logger כאן כדי להיות ייחודי
+    global handler_added  # גישה למשתנה הגלובלי
+    logger = logging.getLogger("AIResumeAnalyzer")
 
-    # בדיקה אם כבר קיים handler מסוג BetterStackHandler
-    if any(isinstance(handler, BetterStackHandler) for handler in logger.handlers):
+    # אם ה-handler כבר נוסף, החזר
+    if handler_added:
         logging.info("🔔 BetterStack handler already added.")
         return
 
@@ -58,6 +62,7 @@ def add_betterstack_handler():
     handler.setFormatter(formatter)
     logger.addHandler(handler)
 
+    handler_added = True  # סימן שה-handler נוסף
     logging.info(f"🔔 BetterStack handler added. Total handlers: {len(logger.handlers)}")
 
 
