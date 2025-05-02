@@ -27,15 +27,21 @@ st.write("Upload a resume and enter a job description – and get a smart match 
 
 # קובץ קורות חיים
 uploaded_file = st.file_uploader("📄 Upload a resume file (PDF only)", type="pdf")
-logging.info("File uploader initialized.")
+if "file_uploader_initialized" not in st.session_state:
+    logging.info("File uploader initialized.")
+    st.session_state.file_uploader_initialized = True
 
 # תיאור המשרה
 job_description = st.text_area("📝 Paste the job description here", height=200)
-logging.info("Job description text area initialized.")
+if "job_description_initialized" not in st.session_state:
+    logging.info("Job description text area initialized.")
+    st.session_state.job_description_initialized = True
 
 # שדה קלט לכתובת מייל
 email_address = st.text_input("📧 Enter your email address (Optional)")
-logging.info("Email input field initialized.")
+if "email_input_initialized" not in st.session_state:
+    logging.info("Email input field initialized.")
+    st.session_state.email_input_initialized = True
 
 # כפתור ניתוח
 if st.button("🔍 Analyze match"):
