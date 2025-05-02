@@ -1,5 +1,7 @@
 import logging
 import os
+import streamlit as st
+
 import requests
 
 
@@ -32,8 +34,8 @@ def add_betterstack_handler():
     if _logger_initialized:
         return  # כבר אותחל
 
-    source_token = os.getenv("SOURCE_TOKEN")
-    host = os.getenv("HOST")
+    source_token = st.secrets("SOURCE_TOKEN")
+    host = st.secrets("HOST")
 
     if not source_token or not host:
         raise ValueError("SOURCE_TOKEN or HOST is not set in the environment variables.")
