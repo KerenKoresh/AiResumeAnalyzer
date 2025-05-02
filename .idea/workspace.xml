@@ -4,12 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="807201ae-ee64-4ca6-9628-3d677c5c95ca" name="Changes" comment="st.secrets(&quot;OPENAI_API_KEY)">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/match_analysis.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/match_analysis.py" afterDir="false" />
+    <list default="true" id="807201ae-ee64-4ca6-9628-3d677c5c95ca" name="Changes" comment="email fix">
+      <change afterPath="$PROJECT_DIR$/utils/temp/openai_util_backup.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/utils/email_utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/email_utils.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/logging_utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/logging_utils.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/openai_utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/openai_utils.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -99,22 +96,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1745908845465</updated>
-    </task>
-    <task id="LOCAL-00042" summary="general fixes">
-      <option name="closed" value="true" />
-      <created>1746178989103</created>
-      <option name="number" value="00042" />
-      <option name="presentableId" value="LOCAL-00042" />
-      <option name="project" value="LOCAL" />
-      <updated>1746178989103</updated>
-    </task>
-    <task id="LOCAL-00043" summary="init_logger">
-      <option name="closed" value="true" />
-      <created>1746179042824</created>
-      <option name="number" value="00043" />
-      <option name="presentableId" value="LOCAL-00043" />
-      <option name="project" value="LOCAL" />
-      <updated>1746179042824</updated>
     </task>
     <task id="LOCAL-00044" summary="init_logger">
       <option name="closed" value="true" />
@@ -492,7 +473,23 @@
       <option name="project" value="LOCAL" />
       <updated>1746188637293</updated>
     </task>
-    <option name="localTasksCounter" value="91" />
+    <task id="LOCAL-00091" summary="ai.resume.analyzer.ko@gmail.com">
+      <option name="closed" value="true" />
+      <created>1746190030557</created>
+      <option name="number" value="00091" />
+      <option name="presentableId" value="LOCAL-00091" />
+      <option name="project" value="LOCAL" />
+      <updated>1746190030557</updated>
+    </task>
+    <task id="LOCAL-00092" summary="email fix">
+      <option name="closed" value="true" />
+      <created>1746190257630</created>
+      <option name="number" value="00092" />
+      <option name="presentableId" value="LOCAL-00092" />
+      <option name="project" value="LOCAL" />
+      <updated>1746190257630</updated>
+    </task>
+    <option name="localTasksCounter" value="93" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -507,8 +504,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="fix BetterStackHandler" />
-    <MESSAGE value="load_dotenv" />
     <MESSAGE value="remove load_dotenv" />
     <MESSAGE value="    logger.info(f&quot;Handlers count: {len(logger.handlers)}&quot;)" />
     <MESSAGE value="@st.cache_resource&#10;def init_logger():&#10;    add_betterstack_handler()&#10;    return True&#10;&#10;init_logger()" />
@@ -532,6 +527,8 @@
     <MESSAGE value="comments in en" />
     <MESSAGE value="add logger" />
     <MESSAGE value="st.secrets(&quot;OPENAI_API_KEY)" />
-    <option name="LAST_COMMIT_MESSAGE" value="st.secrets(&quot;OPENAI_API_KEY)" />
+    <MESSAGE value="ai.resume.analyzer.ko@gmail.com" />
+    <MESSAGE value="email fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="email fix" />
   </component>
 </project>
