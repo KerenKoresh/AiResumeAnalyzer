@@ -67,9 +67,8 @@ def init_logger():
         logging.info("🔔 Logging test: logger initialized")
 
         # בדיקה אם ה-handler של BetterStack כבר הוסף
-        if not any(isinstance(handler, logging.Handler) and "BetterStack" in str(handler) for handler in
-                   logging.getLogger().handlers):
-            add_betterstack_handler()
+        if not any(isinstance(handler, BetterStackHandler) for handler in logging.getLogger().handlers):
+            add_betterstack_handler()  # הוסף את ה-handler רק אם הוא לא קיים
             logging.info("🔔 BetterStack handler added.")
         else:
             logging.info("🔔 BetterStack handler already exists.")
