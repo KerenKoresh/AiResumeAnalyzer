@@ -70,7 +70,7 @@ def init_logger():
     # אתחול של הלוגר
     logger = logging.getLogger("AIResumeAnalyzer")
 
-    # ננקה את כל ה-handlers הקיימים
+    # ננקה את כל ה-handlers הקיימים (גם את ה-StreamHandler)
     for handler in logger.handlers[:]:
         logger.removeHandler(handler)
 
