@@ -29,5 +29,6 @@ def send_email(subject, body, to_email):
         server.sendmail(from_email, to_email, msg.as_string())
         server.quit()
         logger.info(f"🔔 Email sent successfully to {to_email}")
+        st.success(f"Results have been sent to {to_email}")
     except Exception as e:
         logger.error(f"Error sending email: {e}")

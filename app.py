@@ -60,8 +60,6 @@ if st.button("🔍 Analyze match"):
                     # If an email address was provided, send the result
                     if email_address:
                         send_email("Resume Match Analysis", result, email_address)
-                        st.success(f"Results have been sent to {email_address}")
-                        logger.info(f"Results sent to {email_address}")
 
             except Exception as e:
                 st.error(f"Error in analysis: {str(e)}")
