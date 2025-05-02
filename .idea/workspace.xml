@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="807201ae-ee64-4ca6-9628-3d677c5c95ca" name="Changes" comment="delete content from .env">
-      <change beforePath="$PROJECT_DIR$/utils/email_utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/email_utils.py" afterDir="false" />
-    </list>
+    <list default="true" id="807201ae-ee64-4ca6-9628-3d677c5c95ca" name="Changes" comment="email validation" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -95,14 +93,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1745908845465</updated>
-    </task>
-    <task id="LOCAL-00046" summary="init_logger">
-      <option name="closed" value="true" />
-      <created>1746179653266</created>
-      <option name="number" value="00046" />
-      <option name="presentableId" value="LOCAL-00046" />
-      <option name="project" value="LOCAL" />
-      <updated>1746179653266</updated>
     </task>
     <task id="LOCAL-00047" summary="init_logger">
       <option name="closed" value="true" />
@@ -488,7 +478,15 @@
       <option name="project" value="LOCAL" />
       <updated>1746190767347</updated>
     </task>
-    <option name="localTasksCounter" value="95" />
+    <task id="LOCAL-00095" summary="email validation">
+      <option name="closed" value="true" />
+      <created>1746191510673</created>
+      <option name="number" value="00095" />
+      <option name="presentableId" value="LOCAL-00095" />
+      <option name="project" value="LOCAL" />
+      <updated>1746191510673</updated>
+    </task>
+    <option name="localTasksCounter" value="96" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -503,7 +501,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="    logger.info(f&quot;Handlers count: {len(logger.handlers)}&quot;)" />
     <MESSAGE value="@st.cache_resource&#10;def init_logger():&#10;    add_betterstack_handler()&#10;    return True&#10;&#10;init_logger()" />
     <MESSAGE value="Streamlit setting" />
     <MESSAGE value="_logger_initialized" />
@@ -528,6 +525,7 @@
     <MESSAGE value="ai.resume.analyzer.ko@gmail.com" />
     <MESSAGE value="email fix" />
     <MESSAGE value="delete content from .env" />
-    <option name="LAST_COMMIT_MESSAGE" value="delete content from .env" />
+    <MESSAGE value="email validation" />
+    <option name="LAST_COMMIT_MESSAGE" value="email validation" />
   </component>
 </project>
