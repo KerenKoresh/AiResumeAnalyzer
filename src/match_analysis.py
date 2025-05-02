@@ -4,6 +4,7 @@ import logging
 
 logger = logging.getLogger("AIResumeAnalyzer")
 
+
 def analyze_match(resume_text, job_description):
     try:
         result = get_match_analysis(resume_text, job_description)
