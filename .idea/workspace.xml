@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="807201ae-ee64-4ca6-9628-3d677c5c95ca" name="Changes" comment="clean handlers">
-      <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
-    </list>
+    <list default="true" id="807201ae-ee64-4ca6-9628-3d677c5c95ca" name="Changes" comment="setdefault" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -95,38 +93,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1745908845465</updated>
-    </task>
-    <task id="LOCAL-00011" summary="load_dotenv">
-      <option name="closed" value="true" />
-      <created>1746170544418</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1746170544418</updated>
-    </task>
-    <task id="LOCAL-00012" summary="load_dotenv">
-      <option name="closed" value="true" />
-      <created>1746170608738</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1746170608738</updated>
-    </task>
-    <task id="LOCAL-00013" summary="load_dotenv">
-      <option name="closed" value="true" />
-      <created>1746170675015</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1746170675015</updated>
-    </task>
-    <task id="LOCAL-00014" summary="load_dotenv">
-      <option name="closed" value="true" />
-      <created>1746170790980</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1746170790980</updated>
     </task>
     <task id="LOCAL-00015" summary="remove load_dotenv">
       <option name="closed" value="true" />
@@ -488,7 +454,39 @@
       <option name="project" value="LOCAL" />
       <updated>1746181680352</updated>
     </task>
-    <option name="localTasksCounter" value="60" />
+    <task id="LOCAL-00060" summary="clean handlers">
+      <option name="closed" value="true" />
+      <created>1746181975080</created>
+      <option name="number" value="00060" />
+      <option name="presentableId" value="LOCAL-00060" />
+      <option name="project" value="LOCAL" />
+      <updated>1746181975080</updated>
+    </task>
+    <task id="LOCAL-00061" summary="clean handlers">
+      <option name="closed" value="true" />
+      <created>1746182030334</created>
+      <option name="number" value="00061" />
+      <option name="presentableId" value="LOCAL-00061" />
+      <option name="project" value="LOCAL" />
+      <updated>1746182030334</updated>
+    </task>
+    <task id="LOCAL-00062" summary="setdefault">
+      <option name="closed" value="true" />
+      <created>1746182090406</created>
+      <option name="number" value="00062" />
+      <option name="presentableId" value="LOCAL-00062" />
+      <option name="project" value="LOCAL" />
+      <updated>1746182090406</updated>
+    </task>
+    <task id="LOCAL-00063" summary="setdefault">
+      <option name="closed" value="true" />
+      <created>1746182145479</created>
+      <option name="number" value="00063" />
+      <option name="presentableId" value="LOCAL-00063" />
+      <option name="project" value="LOCAL" />
+      <updated>1746182145479</updated>
+    </task>
+    <option name="localTasksCounter" value="64" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -510,6 +508,7 @@
     <MESSAGE value="general fixes" />
     <MESSAGE value="init_logger" />
     <MESSAGE value="clean handlers" />
-    <option name="LAST_COMMIT_MESSAGE" value="clean handlers" />
+    <MESSAGE value="setdefault" />
+    <option name="LAST_COMMIT_MESSAGE" value="setdefault" />
   </component>
 </project>

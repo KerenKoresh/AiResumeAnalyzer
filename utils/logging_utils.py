@@ -59,7 +59,7 @@ def add_betterstack_handler():
 
 
 def init_logger():
-    # אם המפתח לא קיים, אתחל אותו
+    # ודא שהמאפיין קיים בתוך session_state
     if "logger_initialized" not in st.session_state:
         st.session_state["logger_initialized"] = False
 
@@ -86,8 +86,3 @@ def init_logger():
     # סמן שהלוגר מאותחל
     st.session_state["logger_initialized"] = True
     logging.info("🔔 Logger initialized successfully.")
-
-# ודא שאתה מפעיל את init_logger פעם אחת בלבד בהתחלה של האפליקציה
-if "initialized_ui" not in st.session_state:
-    init_logger()
-    st.session_state["initialized_ui"] = True
