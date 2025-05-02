@@ -4,11 +4,10 @@ import os
 import streamlit as st
 from dotenv import load_dotenv
 
-load_dotenv()  # טוען משתני סביבה מקובץ .env (לשימוש מקומי)
+load_dotenv()  # טוען משתני סביבה מקובץ .env
 
-# וודא שהמפתח "logger_initialized" קיים לפני גישה אליו
-if "logger_initialized" not in st.session_state:
-    st.session_state.logger_initialized = False
+# משתנה גלובלי לשמירת מצב הלוגר
+logger_initialized = False
 
 class BetterStackHandler(logging.Handler):
     def __init__(self, source_token, host):
@@ -40,7 +39,7 @@ def get_secret(key):
 def add_betterstack_handler():
     logger = logging.getLogger("AIResumeAnalyzer")
 
-    # בדוק אם כבר יש BetterStack handler
+    # אם כבר יש BetterStack handler, אל נוסיף אחד נוסף
     if any(isinstance(handler, BetterStackHandler) for handler in logger.handlers):
         logging.info("🔔 BetterStack handler already exists.")
         return
@@ -63,6 +62,12 @@ def add_betterstack_handler():
 
 
 def init_logger():
+    global logger_initialized
+
+    if logger_initialized:
+        logging.info("🔔 Logger is already initialized.")
+        return
+
     logger = logging.getLogger("AIResumeAnalyzer")
 
     # הוסף את ה-StreamHandler רק אם הוא לא קיים כבר
@@ -77,12 +82,9 @@ def init_logger():
     # הוסף את ה-handler של BetterStack אם הוא לא קיים כבר
     add_betterstack_handler()
 
-    # אם הלוגר לא הוגדר עדיין, סמן אותו כהוגדר
-    if not st.session_state.logger_initialized:
-        st.session_state.logger_initialized = True
-        logging.info("🔔 Logger initialized successfully.")
-    else:
-        logging.info("🔔 Logger was already initialized.")
+    logger_initialized = True
+    logging.info("🔔 Logger initialized successfully.")
 
-# כעת נפעיל את הפונקציה init_logger() שמוודאת שההגדרות של הלוגר לא חוזרות על עצמן
+
+# כעת נפעיל את הפונקציה init_logger() פעם אחת
 init_logger()
