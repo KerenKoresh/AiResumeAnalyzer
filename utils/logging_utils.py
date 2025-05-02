@@ -25,7 +25,8 @@ class BetterStackHandler(logging.Handler):
                 json={"message": log_entry}
             )
         except Exception as e:
-            logging.error(f"Failed to send log to BetterStack: {e}")
+            # הימנע מלוג נוסף כאן כדי לא ליצור לולאת שגיאות
+            print(f"[BetterStackHandler] Failed to send log: {e}")
 
 
 def get_secret(key):
@@ -37,13 +38,12 @@ def get_secret(key):
 def add_betterstack_handler():
     logger = logging.getLogger("AIResumeAnalyzer")
 
-    # אם כבר יש BetterStack handler, אל נוסיף אחד נוסף
     if any(isinstance(handler, BetterStackHandler) for handler in logger.handlers):
-        logging.info("🔔 BetterStack handler already exists.")
+        logger.info("🔔 BetterStack handler already exists.")
         return
 
-    source_token = st.secrets.get("SOURCE_TOKEN")
-    host = st.secrets.get("HOST")
+    source_token = get_secret("SOURCE_TOKEN")
+    host = get_secret("HOST")
 
     if not source_token or not host:
         raise ValueError("SOURCE_TOKEN or HOST is not set in secrets or environment variables.")
@@ -55,35 +55,29 @@ def add_betterstack_handler():
     formatter = logging.Formatter('%(asctime)s - %(levelname)s - %(message)s')
     handler.setFormatter(formatter)
     logger.addHandler(handler)
-
-    logging.info(f"🔔 BetterStack handler added. Total handlers: {len(logger.handlers)}")
+    logger.info(f"🔔 BetterStack handler added. Total handlers: {len(logger.handlers)}")
 
 
 def init_logger():
-    # ודא שהמאפיין קיים בתוך session_state
+    logger = logging.getLogger("AIResumeAnalyzer")
+    logger.setLevel(logging.INFO)  # חשוב כדי לוודא שכל הלוגים יעברו
+
     if "logger_initialized" not in st.session_state:
         st.session_state["logger_initialized"] = False
 
-    # אם הלוגר כבר מאותחל, אין צורך לאתחל אותו שוב
     if st.session_state["logger_initialized"]:
-        logging.info("🔔 Logger is already initialized.")
+        logger.info("🔔 Logger is already initialized.")
         return
 
-    # אתחול של הלוגר
-    logger = logging.getLogger("AIResumeAnalyzer")
-
-    # הוסף את ה-StreamHandler רק אם הוא לא קיים כבר
     if not any(isinstance(handler, logging.StreamHandler) for handler in logger.handlers):
         handler = logging.StreamHandler()
         handler.setLevel(logging.INFO)
         formatter = logging.Formatter('%(asctime)s - %(levelname)s - %(message)s')
         handler.setFormatter(formatter)
         logger.addHandler(handler)
-        logging.info("🔔 StreamHandler added.")
+        logger.info("🔔 StreamHandler added.")
 
-    # הוסף את ה-handler של BetterStack אם הוא לא קיים כבר
     add_betterstack_handler()
 
-    # סמן שהלוגר מאותחל
     st.session_state["logger_initialized"] = True
-    logging.info("🔔 Logger initialized successfully.")
+    logger.info("🔔 Logger initialized successfully.")

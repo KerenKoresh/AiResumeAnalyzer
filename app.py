@@ -4,6 +4,8 @@ from src.match_analysis import analyze_match
 from utils.email_utils import send_email
 from utils.logging_utils import init_logger
 from utils.pdf_utils import extract_text_from_pdf
+
+# יצירת Logger ספציפי לאפליקציה
 logger = logging.getLogger("AIResumeAnalyzer")
 
 # אתחול Streamlit UI (רק פעם אחת)
@@ -66,4 +68,4 @@ if st.button("🔍 Analyze match"):
                 logger.error(f"Error in analysis: {str(e)}")
     else:
         st.warning("Please upload a resume file and enter a job description.")
-        logging.warning("User did not upload resume or enter job description.")
+        logger.warning("User did not upload resume or enter job description.")
