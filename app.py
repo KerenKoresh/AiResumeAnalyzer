@@ -2,16 +2,17 @@ import logging
 import streamlit as st
 from src.match_analysis import analyze_match
 from utils.email_utils import send_email
-from utils.logging_utils import init_logger  # שינוי כאן
+from utils.logging_utils import init_logger
 from utils.pdf_utils import extract_text_from_pdf
 
-# אתחול הלוגינג
-if "logger_initialized" not in st.session_state:
+# אתחול הלוגינג (לא משתמשים ב-session_state)
+if 'logger_initialized' not in st.session_state:
     st.session_state.logger_initialized = False
 
 if not st.session_state.logger_initialized:
+    # אתחול הלוגר
     init_logger()
-    st.session_state.logger_initialized = True
+    st.session_state.logger_initialized = True  # מבטיח שיתחיל רק פעם אחת
 
 # הגדרת Streamlit (רק פעם אחת)
 if "initialized_ui" not in st.session_state:
