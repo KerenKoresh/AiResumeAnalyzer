@@ -6,21 +6,8 @@ from utils.logging_utils import init_logger
 from utils.pdf_utils import extract_text_from_pdf
 
 # אתחול Streamlit UI (רק פעם אחת)
-if "initialized_ui" not in st.session_state:
-    st.set_page_config(page_title="AI Resume Analyzer", layout="centered")
-    st.session_state["initialized_ui"] = True
+st.set_page_config(page_title="AI Resume Analyzer", layout="centered")
 
-# אתחול הלוגינג - הימנע משימוש ב-session_state אם אין צורך
-try:
-    # אתחול הלוגר רק אם הוא לא מאותחל
-    if "logger_initialized" not in st.session_state:
-        init_logger()
-        st.session_state["logger_initialized"] = True
-except Exception as e:
-    st.error(f"Error initializing logger: {str(e)}")
-    logging.error(f"Error initializing logger: {str(e)}")
-
-# הגדרת Streamlit
 st.title("🧠 AI Resume Analyzer")
 st.write("Upload a resume and enter a job description – and get a smart match analysis!")
 

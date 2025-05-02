@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="807201ae-ee64-4ca6-9628-3d677c5c95ca" name="Changes" comment="setdefault" />
+    <list default="true" id="807201ae-ee64-4ca6-9628-3d677c5c95ca" name="Changes" comment="st.write(st.session_state)">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -93,38 +95,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1745908845465</updated>
-    </task>
-    <task id="LOCAL-00020" summary="Streamlit setting">
-      <option name="closed" value="true" />
-      <created>1746172061980</created>
-      <option name="number" value="00020" />
-      <option name="presentableId" value="LOCAL-00020" />
-      <option name="project" value="LOCAL" />
-      <updated>1746172061980</updated>
-    </task>
-    <task id="LOCAL-00021" summary="Streamlit setting">
-      <option name="closed" value="true" />
-      <created>1746172129028</created>
-      <option name="number" value="00021" />
-      <option name="presentableId" value="LOCAL-00021" />
-      <option name="project" value="LOCAL" />
-      <updated>1746172129029</updated>
-    </task>
-    <task id="LOCAL-00022" summary="_logger_initialized">
-      <option name="closed" value="true" />
-      <created>1746172591924</created>
-      <option name="number" value="00022" />
-      <option name="presentableId" value="LOCAL-00022" />
-      <option name="project" value="LOCAL" />
-      <updated>1746172591924</updated>
-    </task>
-    <task id="LOCAL-00023" summary="st.secrets">
-      <option name="closed" value="true" />
-      <created>1746173218139</created>
-      <option name="number" value="00023" />
-      <option name="presentableId" value="LOCAL-00023" />
-      <option name="project" value="LOCAL" />
-      <updated>1746173218139</updated>
     </task>
     <task id="LOCAL-00024" summary="st.secrets">
       <option name="closed" value="true" />
@@ -486,7 +456,39 @@
       <option name="project" value="LOCAL" />
       <updated>1746182521218</updated>
     </task>
-    <option name="localTasksCounter" value="69" />
+    <task id="LOCAL-00069" summary="setdefault">
+      <option name="closed" value="true" />
+      <created>1746182862230</created>
+      <option name="number" value="00069" />
+      <option name="presentableId" value="LOCAL-00069" />
+      <option name="project" value="LOCAL" />
+      <updated>1746182862230</updated>
+    </task>
+    <task id="LOCAL-00070" summary="setdefault">
+      <option name="closed" value="true" />
+      <created>1746183040588</created>
+      <option name="number" value="00070" />
+      <option name="presentableId" value="LOCAL-00070" />
+      <option name="project" value="LOCAL" />
+      <updated>1746183040588</updated>
+    </task>
+    <task id="LOCAL-00071" summary="setdefault">
+      <option name="closed" value="true" />
+      <created>1746183114689</created>
+      <option name="number" value="00071" />
+      <option name="presentableId" value="LOCAL-00071" />
+      <option name="project" value="LOCAL" />
+      <updated>1746183114689</updated>
+    </task>
+    <task id="LOCAL-00072" summary="st.write(st.session_state)">
+      <option name="closed" value="true" />
+      <created>1746183249174</created>
+      <option name="number" value="00072" />
+      <option name="presentableId" value="LOCAL-00072" />
+      <option name="project" value="LOCAL" />
+      <updated>1746183249174</updated>
+    </task>
+    <option name="localTasksCounter" value="73" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -509,6 +511,7 @@
     <MESSAGE value="init_logger" />
     <MESSAGE value="clean handlers" />
     <MESSAGE value="setdefault" />
-    <option name="LAST_COMMIT_MESSAGE" value="setdefault" />
+    <MESSAGE value="st.write(st.session_state)" />
+    <option name="LAST_COMMIT_MESSAGE" value="st.write(st.session_state)" />
   </component>
 </project>
