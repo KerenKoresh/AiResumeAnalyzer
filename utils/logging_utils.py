@@ -1,3 +1,4 @@
+# logging_utils.py
 import logging
 import requests
 import os
@@ -5,7 +6,6 @@ import streamlit as st
 from dotenv import load_dotenv
 
 load_dotenv()  # טוען משתני סביבה מקובץ .env (לשימוש מקומי)
-
 
 class BetterStackHandler(logging.Handler):
     def __init__(self, source_token, host):
@@ -29,14 +29,13 @@ class BetterStackHandler(logging.Handler):
 
 
 def get_secret(key):
-    # קודם כל מנסה מה-secrets של Streamlit Cloud, אחרת מהסביבה המקומית
     if key in st.secrets:
         return st.secrets[key]
     return os.getenv(key)
 
 
 def add_betterstack_handler():
-    logger = logging.getLogger()
+    logger = logging.getLogger("AIResumeAnalyzer")  # הגדרת ה-logger כאן כדי להיות ייחודי
 
     # בדיקה אם כבר קיים handler מסוג BetterStackHandler
     if any(isinstance(handler, BetterStackHandler) for handler in logger.handlers):
@@ -60,20 +59,3 @@ def add_betterstack_handler():
     logger.addHandler(handler)
 
     logging.info(f"🔔 BetterStack handler added. Total handlers: {len(logger.handlers)}")
-
-
-logger = logging.getLogger("AIResumeAnalyzer")
-
-
-def init_logger():
-    # אם עדיין אין handlers, הוסף את ה-handler
-    if len(logger.handlers) == 0:
-        handler = logging.StreamHandler()
-        handler.setLevel(logging.INFO)
-        formatter = logging.Formatter('%(asctime)s - %(levelname)s - %(message)s')
-        handler.setFormatter(formatter)
-        logger.addHandler(handler)
-        logger.setLevel(logging.INFO)
-        logger.info("🔔 BetterStack handler added.")
-    else:
-        logger.info("🔔 BetterStack handler already exists.")
