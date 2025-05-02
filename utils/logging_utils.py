@@ -61,18 +61,21 @@ def add_betterstack_handler():
     logging.info(f"🔔 BetterStack handler added. Total handlers: {len(logger.handlers)}")
 
 
+import logging
+import streamlit as st
+
+
 def init_logger():
     # אתחול של הלוגר אם הוא לא הותקן קודם
     if "logger_initialized" not in st.session_state:
-        logging.info("🔔 Logging test: logger initialized")
-
-        # בדיקה אם ה-handler של BetterStack כבר הוסף
+        # בדוק אם ה-handler כבר קיים
         if not any(isinstance(handler, BetterStackHandler) for handler in logging.getLogger().handlers):
-            add_betterstack_handler()  # הוסף את ה-handler רק אם הוא לא קיים
+            add_betterstack_handler()  # הוסף את ה-handler אם לא קיים
             logging.info("🔔 BetterStack handler added.")
-            st.session_state.logger_initialized = True
         else:
             logging.info("🔔 BetterStack handler already exists.")
 
+        # שמור במשתנה של session_state
+        st.session_state.logger_initialized = True
     else:
         logging.debug("🔔 Logger already initialized previously.")
