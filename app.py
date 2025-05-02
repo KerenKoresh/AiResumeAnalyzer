@@ -1,5 +1,4 @@
 import streamlit as st
-from logtail.handler import LogtailHandler
 from src.match_analysis import analyze_match
 from utils.logging_utils import add_logtail_handler
 from utils.pdf_utils import extract_text_from_pdf
