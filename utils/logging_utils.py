@@ -6,9 +6,8 @@ from dotenv import load_dotenv
 
 load_dotenv()  # טוען משתני סביבה מקובץ .env (לשימוש מקומי)
 
-# סימון הגדרת ה-handler
-handler_added = False
-
+# סימון שה-logger כבר הוגדר
+logger_initialized = False
 
 class BetterStackHandler(logging.Handler):
     def __init__(self, source_token, host):
@@ -38,14 +37,13 @@ def get_secret(key):
 
 
 def add_betterstack_handler():
-    global handler_added  # גישה למשתנה הגלובלי
-    logger = logging.getLogger("AIResumeAnalyzer")
+    global logger_initialized  # השתמש במשתנה גלובלי
 
-    # אם ה-handler כבר נוסף, החזר
-    if handler_added:
-        logging.info("🔔 BetterStack handler already added.")
+    if logger_initialized:  # אם ה-logger כבר הוגדר
+        logging.info("🔔 BetterStack handler already exists.")
         return
 
+    logger = logging.getLogger("AIResumeAnalyzer")
     source_token = st.secrets.get("SOURCE_TOKEN")
     host = st.secrets.get("HOST")
 
@@ -62,25 +60,31 @@ def add_betterstack_handler():
     handler.setFormatter(formatter)
     logger.addHandler(handler)
 
-    handler_added = True  # סימן שה-handler נוסף
+    logger_initialized = True  # עדכון המצב שה-logger הוגדר
     logging.info(f"🔔 BetterStack handler added. Total handlers: {len(logger.handlers)}")
 
 
 def init_logger():
-    # וודא שאין כבר handler קיים, ואם לא הוסף את ה-stream handler
-    logger = logging.getLogger("AIResumeAnalyzer")
+    global logger_initialized  # השתמש במשתנה גלובלי
 
-    # אם עדיין אין StreamHandler, הוסף אותו
-    if not any(isinstance(handler, logging.StreamHandler) for handler in logger.handlers):
-        handler = logging.StreamHandler()
-        handler.setLevel(logging.INFO)
-        formatter = logging.Formatter('%(asctime)s - %(levelname)s - %(message)s')
-        handler.setFormatter(formatter)
-        logger.addHandler(handler)
-        logger.setLevel(logging.INFO)
-        logging.info("🔔 StreamHandler added.")
+    # אם ה-logger לא הוגדר עדיין, הוסף את ה-stream handler
+    if not logger_initialized:
+        logger = logging.getLogger("AIResumeAnalyzer")
+
+        # הוסף את ה-StreamHandler אם הוא לא קיים
+        if not any(isinstance(handler, logging.StreamHandler) for handler in logger.handlers):
+            handler = logging.StreamHandler()
+            handler.setLevel(logging.INFO)
+            formatter = logging.Formatter('%(asctime)s - %(levelname)s - %(message)s')
+            handler.setFormatter(formatter)
+            logger.addHandler(handler)
+            logger.setLevel(logging.INFO)
+            logging.info("🔔 StreamHandler added.")
+        else:
+            logging.info("🔔 StreamHandler already exists.")
+
+        # הוסף את ה-handler של BetterStack
+        add_betterstack_handler()
+
     else:
-        logging.info("🔔 StreamHandler already exists.")
-
-    # הוסף את ה-handler של BetterStack
-    add_betterstack_handler()
+        logging.info("🔔 Logger already initialized.")
