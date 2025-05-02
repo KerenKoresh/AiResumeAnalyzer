@@ -65,26 +65,24 @@ def add_betterstack_handler():
 def init_logger():
     logger = logging.getLogger("AIResumeAnalyzer")
 
-    # ניקוי כל ה-handlers הקיימים (כדי למנוע כפילויות)
-    if len(logger.handlers) > 0:
-        logger.handlers.clear()
-        logging.info("🔔 Cleared existing handlers.")
-
-    # הוסף את ה-StreamHandler
-    handler = logging.StreamHandler()
-    handler.setLevel(logging.INFO)
-    formatter = logging.Formatter('%(asctime)s - %(levelname)s - %(message)s')
-    handler.setFormatter(formatter)
-    logger.addHandler(handler)
-    logger.setLevel(logging.INFO)
-    logging.info("🔔 StreamHandler added.")
+    # הוסף את ה-StreamHandler רק אם הוא לא קיים כבר
+    if not any(isinstance(handler, logging.StreamHandler) for handler in logger.handlers):
+        handler = logging.StreamHandler()
+        handler.setLevel(logging.INFO)
+        formatter = logging.Formatter('%(asctime)s - %(levelname)s - %(message)s')
+        handler.setFormatter(formatter)
+        logger.addHandler(handler)
+        logging.info("🔔 StreamHandler added.")
 
     # הוסף את ה-handler של BetterStack אם הוא לא קיים כבר
     add_betterstack_handler()
 
-    # אחרי שנוספו כל ה-handlers, קבע את המצב של logger_initialized
+    # אם הלוגר לא הוגדר עדיין, סמן אותו כהוגדר
     if not st.session_state.logger_initialized:
         st.session_state.logger_initialized = True
         logging.info("🔔 Logger initialized successfully.")
     else:
         logging.info("🔔 Logger was already initialized.")
+
+# כעת נפעיל את הפונקציה init_logger() שמוודאת שההגדרות של הלוגר לא חוזרות על עצמן
+init_logger()

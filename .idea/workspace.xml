@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="807201ae-ee64-4ca6-9628-3d677c5c95ca" name="Changes" comment="init_logger">
+    <list default="true" id="807201ae-ee64-4ca6-9628-3d677c5c95ca" name="Changes" comment="clean handlers">
       <change beforePath="$PROJECT_DIR$/utils/logging_utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/logging_utils.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -95,30 +95,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1745908845465</updated>
-    </task>
-    <task id="LOCAL-00002" summary="fix logtail import">
-      <option name="closed" value="true" />
-      <created>1746168395459</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1746168395459</updated>
-    </task>
-    <task id="LOCAL-00003" summary="fix logtail import">
-      <option name="closed" value="true" />
-      <created>1746168532107</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1746168532107</updated>
-    </task>
-    <task id="LOCAL-00004" summary="fix logtail import">
-      <option name="closed" value="true" />
-      <created>1746168808165</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1746168808165</updated>
     </task>
     <task id="LOCAL-00005" summary="fix logtail import">
       <option name="closed" value="true" />
@@ -488,7 +464,31 @@
       <option name="project" value="LOCAL" />
       <updated>1746180521283</updated>
     </task>
-    <option name="localTasksCounter" value="51" />
+    <task id="LOCAL-00051" summary="init_logger">
+      <option name="closed" value="true" />
+      <created>1746180620981</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1746180620981</updated>
+    </task>
+    <task id="LOCAL-00052" summary="init_logger">
+      <option name="closed" value="true" />
+      <created>1746180819744</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1746180819744</updated>
+    </task>
+    <task id="LOCAL-00053" summary="clean handlers">
+      <option name="closed" value="true" />
+      <created>1746180874756</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1746180874756</updated>
+    </task>
+    <option name="localTasksCounter" value="54" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -509,6 +509,7 @@
     <MESSAGE value="םfix logs" />
     <MESSAGE value="general fixes" />
     <MESSAGE value="init_logger" />
-    <option name="LAST_COMMIT_MESSAGE" value="init_logger" />
+    <MESSAGE value="clean handlers" />
+    <option name="LAST_COMMIT_MESSAGE" value="clean handlers" />
   </component>
 </project>
