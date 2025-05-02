@@ -59,14 +59,16 @@ def add_betterstack_handler():
 
 
 def init_logger():
-    # ודא שהמפתח 'logger_initialized' קיים ב-session_state או יצר אותו
-    st.session_state.setdefault("logger_initialized", False)
+    # אם המפתח לא קיים, אתחל אותו
+    if "logger_initialized" not in st.session_state:
+        st.session_state["logger_initialized"] = False
 
     # אם הלוגר כבר מאותחל, אין צורך לאתחל אותו שוב
     if st.session_state["logger_initialized"]:
         logging.info("🔔 Logger is already initialized.")
         return
 
+    # אתחול של הלוגר
     logger = logging.getLogger("AIResumeAnalyzer")
 
     # הוסף את ה-StreamHandler רק אם הוא לא קיים כבר
@@ -85,7 +87,7 @@ def init_logger():
     st.session_state["logger_initialized"] = True
     logging.info("🔔 Logger initialized successfully.")
 
-# כעת נפעיל את הפונקציה init_logger() פעם אחת בתוך קוד Streamlit הראשי
+# ודא שאתה מפעיל את init_logger פעם אחת בלבד בהתחלה של האפליקציה
 if "initialized_ui" not in st.session_state:
     init_logger()
-    st.session_state.initialized_ui = True
+    st.session_state["initialized_ui"] = True
