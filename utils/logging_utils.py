@@ -10,7 +10,6 @@ load_dotenv()  # טוען משתני סביבה מקובץ .env (לשימוש מ
 if "logger_initialized" not in st.session_state:
     st.session_state.logger_initialized = False
 
-
 class BetterStackHandler(logging.Handler):
     def __init__(self, source_token, host):
         super().__init__()
@@ -66,26 +65,24 @@ def add_betterstack_handler():
 
 
 def init_logger():
-    # אם ה-logger לא הוגדר עדיין, הוסף את ה-stream handler
+    logger = logging.getLogger("AIResumeAnalyzer")
+
+    # אם עדיין אין Handlers כלל, הוסף את ה-StreamHandler
+    if len(logger.handlers) == 0:
+        handler = logging.StreamHandler()
+        handler.setLevel(logging.INFO)
+        formatter = logging.Formatter('%(asctime)s - %(levelname)s - %(message)s')
+        handler.setFormatter(formatter)
+        logger.addHandler(handler)
+        logger.setLevel(logging.INFO)
+        logging.info("🔔 StreamHandler added.")
+
+    # הוסף את ה-handler של BetterStack אם הוא לא קיים כבר
+    add_betterstack_handler()
+
+    # אחרי שנוספו כל ה-handlers, קבע את המצב של logger_initialized
     if not st.session_state.logger_initialized:
-        logger = logging.getLogger("AIResumeAnalyzer")
-
-        # הוסף את ה-StreamHandler אם הוא לא קיים
-        if not any(isinstance(handler, logging.StreamHandler) for handler in logger.handlers):
-            handler = logging.StreamHandler()
-            handler.setLevel(logging.INFO)
-            formatter = logging.Formatter('%(asctime)s - %(levelname)s - %(message)s')
-            handler.setFormatter(formatter)
-            logger.addHandler(handler)
-            logger.setLevel(logging.INFO)
-            logging.info("🔔 StreamHandler added.")
-        else:
-            logging.info("🔔 StreamHandler already exists.")
-
-        # הוסף את ה-handler של BetterStack
-        add_betterstack_handler()
-
-        st.session_state.logger_initialized = True  # עדכון המצב שה-logger הוגדר
-
+        st.session_state.logger_initialized = True
+        logging.info("🔔 Logger initialized successfully.")
     else:
-        logging.info("🔔 Logger already initialized.")
+        logging.info("🔔 Logger was already initialized.")
