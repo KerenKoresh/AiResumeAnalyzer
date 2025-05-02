@@ -59,3 +59,17 @@ def add_betterstack_handler():
     logger.addHandler(handler)
 
     logging.info(f"🔔 BetterStack handler added. Total handlers: {len(logger.handlers)}")
+
+def init_logger():
+    # אם עדיין אין handlers, הוסף את ה-handler
+    logger = logging.getLogger()
+    if len(logger.handlers) == 0:
+        handler = logging.StreamHandler()
+        handler.setLevel(logging.INFO)
+        formatter = logging.Formatter('%(asctime)s - %(levelname)s - %(message)s')
+        handler.setFormatter(formatter)
+        logger.addHandler(handler)
+        logger.setLevel(logging.INFO)
+        logging.info("🔔 BetterStack handler added.")
+    else:
+        logging.info("🔔 BetterStack handler already exists.")
