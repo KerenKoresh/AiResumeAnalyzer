@@ -2,11 +2,10 @@
 import logging
 from utils.logging_utils import add_betterstack_handler
 
-# קביעת level של הלוגר
-logger = logging.getLogger("AIResumeAnalyzer")  # וודא שאתה משתמש באותו שם logger
+logger = logging.getLogger("AIResumeAnalyzer")
 
 # הוספת ה-handler של BetterStack
-add_betterstack_handler()
+add_betterstack_handler(logger)
 
 # דוגמה לשימוש בלוגר
 logger.info("Logger initialized and BetterStack handler added.")

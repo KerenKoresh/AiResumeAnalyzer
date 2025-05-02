@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="807201ae-ee64-4ca6-9628-3d677c5c95ca" name="Changes" comment="logger_initialized" />
+    <list default="true" id="807201ae-ee64-4ca6-9628-3d677c5c95ca" name="Changes" comment="comments in en" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -93,30 +93,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1745908845465</updated>
-    </task>
-    <task id="LOCAL-00036" summary="םfix logs">
-      <option name="closed" value="true" />
-      <created>1746177440617</created>
-      <option name="number" value="00036" />
-      <option name="presentableId" value="LOCAL-00036" />
-      <option name="project" value="LOCAL" />
-      <updated>1746177440617</updated>
-    </task>
-    <task id="LOCAL-00037" summary="general fixes">
-      <option name="closed" value="true" />
-      <created>1746177902511</created>
-      <option name="number" value="00037" />
-      <option name="presentableId" value="LOCAL-00037" />
-      <option name="project" value="LOCAL" />
-      <updated>1746177902511</updated>
-    </task>
-    <task id="LOCAL-00038" summary="general fixes">
-      <option name="closed" value="true" />
-      <created>1746178433333</created>
-      <option name="number" value="00038" />
-      <option name="presentableId" value="LOCAL-00038" />
-      <option name="project" value="LOCAL" />
-      <updated>1746178433333</updated>
     </task>
     <task id="LOCAL-00039" summary="general fixes">
       <option name="closed" value="true" />
@@ -486,7 +462,31 @@
       <option name="project" value="LOCAL" />
       <updated>1746187059210</updated>
     </task>
-    <option name="localTasksCounter" value="85" />
+    <task id="LOCAL-00085" summary="logger_initialized">
+      <option name="closed" value="true" />
+      <created>1746187186893</created>
+      <option name="number" value="00085" />
+      <option name="presentableId" value="LOCAL-00085" />
+      <option name="project" value="LOCAL" />
+      <updated>1746187186893</updated>
+    </task>
+    <task id="LOCAL-00086" summary="logger_initialized">
+      <option name="closed" value="true" />
+      <created>1746187235889</created>
+      <option name="number" value="00086" />
+      <option name="presentableId" value="LOCAL-00086" />
+      <option name="project" value="LOCAL" />
+      <updated>1746187235889</updated>
+    </task>
+    <task id="LOCAL-00087" summary="comments in en">
+      <option name="closed" value="true" />
+      <created>1746187347607</created>
+      <option name="number" value="00087" />
+      <option name="presentableId" value="LOCAL-00087" />
+      <option name="project" value="LOCAL" />
+      <updated>1746187347607</updated>
+    </task>
+    <option name="localTasksCounter" value="88" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -501,7 +501,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="first commit :)" />
     <MESSAGE value="fix logtail import" />
     <MESSAGE value="LogtailHandler" />
     <MESSAGE value="fix BetterStackHandler" />
@@ -526,6 +525,7 @@
     <MESSAGE value="# ודא שהלוגר לא שולח ל-root logger&#10;logging.getLogger().handlers.clear()" />
     <MESSAGE value="remove logging.getLogger().handlers.clear()" />
     <MESSAGE value="logger_initialized" />
-    <option name="LAST_COMMIT_MESSAGE" value="logger_initialized" />
+    <MESSAGE value="comments in en" />
+    <option name="LAST_COMMIT_MESSAGE" value="comments in en" />
   </component>
 </project>

@@ -1,6 +1,7 @@
 import json
 import os
 import logging
+logger = logging.getLogger("AIResumeAnalyzer")
 
 def read_previous_data(file_path='previous_data.json'):
     if os.path.exists(file_path):

@@ -6,7 +6,7 @@ import logging
 load_dotenv()
 
 openai.api_key = os.getenv("OPENAI_API_KEY")
-
+logger = logging.getLogger("AIResumeAnalyzer")
 def load_system_prompt():
     current_dir = os.path.dirname(__file__)
     file_path = os.path.join(current_dir, "cv_analyzer_prompt.txt")
@@ -15,7 +15,6 @@ def load_system_prompt():
 
 
 def get_match_analysis(resume_text, job_description):
-    """מבצע ניתוח התאמה בין קורות חיים לתיאור משרה לפי פרומפט מתקדם"""
     system_prompt = load_system_prompt()
 
     user_input = f"""Here is my resume:\n{resume_text}\n\nAnd here is the job description:\n{job_description}"""
@@ -29,8 +28,8 @@ def get_match_analysis(resume_text, job_description):
             ],
             temperature=0.3
         )
-        logging.info("🔔 Analysis completed by OpenAI API.")
+        logger.info("🔔 Analysis completed by OpenAI API.")
         return response.choices[0].message["content"]
     except Exception as e:
-        logging.error(f"Error with OpenAI API: {e}")
+        logger.error(f"Error with OpenAI API: {e}")
         raise e

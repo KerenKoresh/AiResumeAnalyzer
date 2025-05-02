@@ -5,6 +5,7 @@ import streamlit as st
 from dotenv import load_dotenv
 
 load_dotenv()  # טוען משתני סביבה מקובץ .env
+logger = logging.getLogger("AIResumeAnalyzer")
 
 
 class BetterStackHandler(logging.Handler):

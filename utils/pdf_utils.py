@@ -1,6 +1,8 @@
 import pdfplumber
 import logging
 
+logger = logging.getLogger("AIResumeAnalyzer")
+
 def extract_text_from_pdf(uploaded_file):
     try:
         with pdfplumber.open(uploaded_file) as pdf:
