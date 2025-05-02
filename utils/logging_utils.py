@@ -1,9 +1,10 @@
-import os
 import logging
+import os
+
 import requests
-from dotenv import load_dotenv
 
 from dotenv import load_dotenv
+
 load_dotenv()
 
 
@@ -32,6 +33,9 @@ class BetterStackHandler(logging.Handler):
             response.raise_for_status()
         except requests.exceptions.RequestException as e:
             print(f"Error sending log to BetterStack: {e}")
+
+
+load_dotenv()
 
 
 def add_betterstack_handler():
