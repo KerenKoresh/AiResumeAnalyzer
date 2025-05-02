@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="807201ae-ee64-4ca6-9628-3d677c5c95ca" name="Changes" comment="general fixes" />
+    <list default="true" id="807201ae-ee64-4ca6-9628-3d677c5c95ca" name="Changes" comment="init_logger" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -422,7 +422,23 @@
       <option name="project" value="LOCAL" />
       <updated>1746178834342</updated>
     </task>
-    <option name="localTasksCounter" value="42" />
+    <task id="LOCAL-00042" summary="general fixes">
+      <option name="closed" value="true" />
+      <created>1746178989103</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1746178989103</updated>
+    </task>
+    <task id="LOCAL-00043" summary="init_logger">
+      <option name="closed" value="true" />
+      <created>1746179042824</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1746179042824</updated>
+    </task>
+    <option name="localTasksCounter" value="44" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -442,6 +458,7 @@
     <MESSAGE value="add logs" />
     <MESSAGE value="םfix logs" />
     <MESSAGE value="general fixes" />
-    <option name="LAST_COMMIT_MESSAGE" value="general fixes" />
+    <MESSAGE value="init_logger" />
+    <option name="LAST_COMMIT_MESSAGE" value="init_logger" />
   </component>
 </project>

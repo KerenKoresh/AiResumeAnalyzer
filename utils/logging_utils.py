@@ -6,6 +6,7 @@ from dotenv import load_dotenv
 
 load_dotenv()  # טוען משתני סביבה מקובץ .env (לשימוש מקומי)
 
+
 class BetterStackHandler(logging.Handler):
     def __init__(self, source_token, host):
         super().__init__()
@@ -61,12 +62,12 @@ def add_betterstack_handler():
     logging.info(f"🔔 BetterStack handler added. Total handlers: {len(logger.handlers)}")
 
 
-logger = logging.getLogger()
+logger = logging.getLogger("AIResumeAnalyzer")
+
 
 def init_logger():
-    # אם ה-handler כבר קיים, אל תוסיף אותו שוב
-    if not any(isinstance(handler, logging.StreamHandler) for handler in logger.handlers):
-        # הוסף את ה-handler רק אם אין כבר אחד
+    # אם עדיין אין handlers, הוסף את ה-handler
+    if len(logger.handlers) == 0:
         handler = logging.StreamHandler()
         handler.setLevel(logging.INFO)
         formatter = logging.Formatter('%(asctime)s - %(levelname)s - %(message)s')
