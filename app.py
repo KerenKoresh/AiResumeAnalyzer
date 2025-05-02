@@ -7,17 +7,17 @@ from utils.pdf_utils import extract_text_from_pdf
 
 # אתחול הלוגינג (לא משתמשים ב-session_state)
 if 'logger_initialized' not in st.session_state:
-    st.session_state.logger_initialized = False
+    st.session_state['logger_initialized'] = False
 
-if not st.session_state.logger_initialized:
+if not st.session_state['logger_initialized']:
     # אתחול הלוגר
     init_logger()
-    st.session_state.logger_initialized = True  # מבטיח שיתחיל רק פעם אחת
+    st.session_state['logger_initialized'] = True  # מבטיח שיתחיל רק פעם אחת
 
 # הגדרת Streamlit (רק פעם אחת)
 if "initialized_ui" not in st.session_state:
     st.set_page_config(page_title="AI Resume Analyzer", layout="centered")
-    st.session_state.initialized_ui = True
+    st.session_state["initialized_ui"] = True
 
 # הגדרת Streamlit
 st.title("🧠 AI Resume Analyzer")
