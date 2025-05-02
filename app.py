@@ -1,7 +1,7 @@
 import streamlit as st
-from utils.logging_utils import add_logtail_handler
-from utils.file_utils import read_previous_data
+from logtail.handler import LogtailHandler
 from src.match_analysis import analyze_match
+from utils.logging_utils import add_logtail_handler
 from utils.pdf_utils import extract_text_from_pdf
 from utils.email_utils import send_email  # ייבוא הפונקציה לשליחת המייל
 
