@@ -4,7 +4,11 @@ import os
 import streamlit as st
 from dotenv import load_dotenv
 
-load_dotenv()  # טוען משתני סביבה מקובץ .env
+load_dotenv()  # טוען משתני סביבה מקובץ .env (לשימוש מקומי)
+
+# סימון שה-logger כבר הוגדר
+if "logger_initialized" not in st.session_state:
+    st.session_state.logger_initialized = False
 
 class BetterStackHandler(logging.Handler):
     def __init__(self, source_token, host):
@@ -36,7 +40,7 @@ def get_secret(key):
 def add_betterstack_handler():
     logger = logging.getLogger("AIResumeAnalyzer")
 
-    # אם כבר יש BetterStack handler, אל נוסיף אחד נוסף
+    # בדוק אם כבר יש BetterStack handler
     if any(isinstance(handler, BetterStackHandler) for handler in logger.handlers):
         logging.info("🔔 BetterStack handler already exists.")
         return
@@ -50,6 +54,8 @@ def add_betterstack_handler():
     if not host.startswith("http"):
         raise ValueError("HOST must include schema, e.g., https://in.logs.betterstack.com")
 
+    logger.setLevel(logging.INFO)
+
     handler = BetterStackHandler(source_token, host)
     formatter = logging.Formatter('%(asctime)s - %(levelname)s - %(message)s')
     handler.setFormatter(formatter)
@@ -59,37 +65,24 @@ def add_betterstack_handler():
 
 
 def init_logger():
-    # ודא שה-session_state מאותחל אם לא קיים
-    if 'logger_initialized' not in st.session_state:
-        st.session_state['logger_initialized'] = False
-
-    # אם הלוגר כבר מאותחל, אין צורך לאתחל אותו שוב
-    if st.session_state['logger_initialized']:
-        logging.info("🔔 Logger is already initialized.")
-        return
-
-    # אתחול של הלוגר
     logger = logging.getLogger("AIResumeAnalyzer")
 
-    # הוסף את ה-StreamHandler רק אם הוא לא קיים כבר
-    if not any(isinstance(handler, logging.StreamHandler) for handler in logger.handlers):
+    # אם עדיין אין Handlers כלל, הוסף את ה-StreamHandler
+    if len(logger.handlers) == 0:
         handler = logging.StreamHandler()
         handler.setLevel(logging.INFO)
         formatter = logging.Formatter('%(asctime)s - %(levelname)s - %(message)s')
         handler.setFormatter(formatter)
         logger.addHandler(handler)
+        logger.setLevel(logging.INFO)
         logging.info("🔔 StreamHandler added.")
 
     # הוסף את ה-handler של BetterStack אם הוא לא קיים כבר
     add_betterstack_handler()
 
-    # סמן שהלוגר מאותחל
-    st.session_state['logger_initialized'] = True
-    logging.info("🔔 Logger initialized successfully.")
-
-# ודא שמבצעים את קריאת init_logger() פעם אחת, אם צריך
-if 'logger_initialized' not in st.session_state or not st.session_state['logger_initialized']:
-    init_logger()
-
-# הוסף את הסטייט הזה כדי לראות את המצב של session_state
-st.write(st.session_state)  # זה יציג את כל המידע שנשמר ב-session_state
+    # אחרי שנוספו כל ה-handlers, קבע את המצב של logger_initialized
+    if not st.session_state.logger_initialized:
+        st.session_state.logger_initialized = True
+        logging.info("🔔 Logger initialized successfully.")
+    else:
+        logging.info("🔔 Logger was already initialized.")
