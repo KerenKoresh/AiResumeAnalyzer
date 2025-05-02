@@ -4,6 +4,8 @@ from utils.logging_utils import add_betterstack_handler  # עדכון כאן
 from utils.pdf_utils import extract_text_from_pdf
 from utils.email_utils import send_email  # ייבוא הפונקציה לשליחת המייל
 
+# הגדרת Streamlit
+st.set_page_config(page_title="AI Resume Analyzer", layout="centered")
 
 @st.cache_resource
 def init_logger():
