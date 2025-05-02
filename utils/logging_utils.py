@@ -3,9 +3,10 @@ import os
 
 import requests
 
-from dotenv import load_dotenv
+import streamlit as st
 
-load_dotenv()
+source_token = st.secrets["SOURCE_TOKEN"]
+host = st.secrets["HOST"]
 
 
 class BetterStackHandler(logging.Handler):
@@ -35,13 +36,7 @@ class BetterStackHandler(logging.Handler):
             print(f"Error sending log to BetterStack: {e}")
 
 
-load_dotenv()
-
-
 def add_betterstack_handler():
-    source_token = os.getenv("SOURCE_TOKEN")
-    host = os.getenv("HOST")
-
     if not source_token or not host:
         raise ValueError("SOURCE_TOKEN or HOST is not set in the environment variables.")
 
