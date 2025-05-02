@@ -21,7 +21,6 @@ def init_logger():
             logging.info("🔔 BetterStack handler already exists.")
 
         st.session_state.logger_initialized = True
-    # לא שולחים את ההודעה שוב אם הלוגר כבר אתחול
     else:
         logging.debug("🔔 Logger already initialized previously.")
 
@@ -35,7 +34,6 @@ init_logger()
 if "initialized_ui" not in st.session_state:
     st.set_page_config(page_title="AI Resume Analyzer", layout="centered")
     st.session_state.initialized_ui = True
-    logging.info("🔔 Streamlit UI initialized")
 
 # הגדרת Streamlit
 st.title("🧠 AI Resume Analyzer")
@@ -54,31 +52,29 @@ email_address = st.text_input("📧 Enter your email address (Optional)")
 if st.button("🔍 Analyze match"):
     if uploaded_file and job_description:
         logging.info("🔔 Analyzing match...")
+
         with st.spinner("Analyzing..."):
             try:
                 resume_text = extract_text_from_pdf(uploaded_file)
-                logging.debug(f"Extracted resume text: {resume_text[:100]}...")  # להציג את ההתחלה של הטקסט להדגמה
 
                 if not resume_text.strip():
-                    st.error(
-                        "No text found in the PDF file. Please ensure the file is valid and not scanned as an image.")
-                    logging.warning("No text found in the PDF file.")
+                    st.error("No text found in the PDF file. Please ensure the file is valid and not scanned as an image.")
+                    logging.error("No text found in the PDF file.")
                 else:
                     # ניתוח חדש
                     result = analyze_match(resume_text, job_description)
                     st.markdown("### 🧾 Analysis Results")
                     st.markdown(result)
-                    logging.info("🔔 Analysis results displayed.")
 
                     # אם הוזנה כתובת מייל, נשלח את התוצאה
                     if email_address:
                         send_email("Resume Match Analysis", result, email_address)
                         st.success(f"Results have been sent to {email_address}")
-                        logging.info(f"🔔 Results sent to {email_address}")
+                        logging.info(f"Results sent to {email_address}")
 
             except Exception as e:
                 st.error(f"Error in analysis: {str(e)}")
-                logging.error(f"🔔 Error in analysis: {str(e)}")
+                logging.error(f"Error in analysis: {str(e)}")
     else:
         st.warning("Please upload a resume file and enter a job description.")
-        logging.warning("User did not upload resume file or enter job description.")
+        logging.warning("User did not upload resume or enter job description.")
