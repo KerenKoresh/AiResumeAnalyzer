@@ -94,46 +94,6 @@
       <option name="presentableId" value="Default" />
       <updated>1745908845465</updated>
     </task>
-    <task id="LOCAL-00015" summary="remove load_dotenv">
-      <option name="closed" value="true" />
-      <created>1746171069491</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1746171069491</updated>
-    </task>
-    <task id="LOCAL-00016" summary="remove load_dotenv">
-      <option name="closed" value="true" />
-      <created>1746171181404</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1746171181404</updated>
-    </task>
-    <task id="LOCAL-00017" summary="avoid dup logs">
-      <option name="closed" value="true" />
-      <created>1746171557102</created>
-      <option name="number" value="00017" />
-      <option name="presentableId" value="LOCAL-00017" />
-      <option name="project" value="LOCAL" />
-      <updated>1746171557102</updated>
-    </task>
-    <task id="LOCAL-00018" summary="    logger.info(f&quot;Handlers count: {len(logger.handlers)}&quot;)">
-      <option name="closed" value="true" />
-      <created>1746171760963</created>
-      <option name="number" value="00018" />
-      <option name="presentableId" value="LOCAL-00018" />
-      <option name="project" value="LOCAL" />
-      <updated>1746171760963</updated>
-    </task>
-    <task id="LOCAL-00019" summary="@st.cache_resource&#10;def init_logger():&#10;    add_betterstack_handler()&#10;    return True&#10;&#10;init_logger()">
-      <option name="closed" value="true" />
-      <created>1746171988108</created>
-      <option name="number" value="00019" />
-      <option name="presentableId" value="LOCAL-00019" />
-      <option name="project" value="LOCAL" />
-      <updated>1746171988108</updated>
-    </task>
     <task id="LOCAL-00020" summary="Streamlit setting">
       <option name="closed" value="true" />
       <created>1746172061980</created>
@@ -486,7 +446,47 @@
       <option name="project" value="LOCAL" />
       <updated>1746182145479</updated>
     </task>
-    <option name="localTasksCounter" value="64" />
+    <task id="LOCAL-00064" summary="setdefault">
+      <option name="closed" value="true" />
+      <created>1746182215823</created>
+      <option name="number" value="00064" />
+      <option name="presentableId" value="LOCAL-00064" />
+      <option name="project" value="LOCAL" />
+      <updated>1746182215823</updated>
+    </task>
+    <task id="LOCAL-00065" summary="setdefault">
+      <option name="closed" value="true" />
+      <created>1746182273402</created>
+      <option name="number" value="00065" />
+      <option name="presentableId" value="LOCAL-00065" />
+      <option name="project" value="LOCAL" />
+      <updated>1746182273403</updated>
+    </task>
+    <task id="LOCAL-00066" summary="setdefault">
+      <option name="closed" value="true" />
+      <created>1746182400389</created>
+      <option name="number" value="00066" />
+      <option name="presentableId" value="LOCAL-00066" />
+      <option name="project" value="LOCAL" />
+      <updated>1746182400389</updated>
+    </task>
+    <task id="LOCAL-00067" summary="setdefault">
+      <option name="closed" value="true" />
+      <created>1746182472658</created>
+      <option name="number" value="00067" />
+      <option name="presentableId" value="LOCAL-00067" />
+      <option name="project" value="LOCAL" />
+      <updated>1746182472658</updated>
+    </task>
+    <task id="LOCAL-00068" summary="setdefault">
+      <option name="closed" value="true" />
+      <created>1746182521218</created>
+      <option name="number" value="00068" />
+      <option name="presentableId" value="LOCAL-00068" />
+      <option name="project" value="LOCAL" />
+      <updated>1746182521218</updated>
+    </task>
+    <option name="localTasksCounter" value="69" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
