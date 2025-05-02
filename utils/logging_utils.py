@@ -70,10 +70,9 @@ def init_logger():
     # אתחול של הלוגר
     logger = logging.getLogger("AIResumeAnalyzer")
 
-    # אם כבר יש לוגים, אל נוסיף עוד handler
-    if logger.hasHandlers():
-        logging.info("🔔 Logger already has handlers.")
-        return
+    # ננקה את כל ה-handlers הקיימים
+    for handler in logger.handlers[:]:
+        logger.removeHandler(handler)
 
     # הוסף את ה-StreamHandler רק אם הוא לא קיים כבר
     stream_handler = logging.StreamHandler()

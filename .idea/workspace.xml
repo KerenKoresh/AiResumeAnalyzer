@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="807201ae-ee64-4ca6-9628-3d677c5c95ca" name="Changes" comment="logger">
-      <change beforePath="$PROJECT_DIR$/utils/logging_utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/logging_utils.py" afterDir="false" />
-    </list>
+    <list default="true" id="807201ae-ee64-4ca6-9628-3d677c5c95ca" name="Changes" comment="logger_initialized" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -95,30 +93,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1745908845465</updated>
-    </task>
-    <task id="LOCAL-00033" summary="avoid dup logs">
-      <option name="closed" value="true" />
-      <created>1746176330605</created>
-      <option name="number" value="00033" />
-      <option name="presentableId" value="LOCAL-00033" />
-      <option name="project" value="LOCAL" />
-      <updated>1746176330605</updated>
-    </task>
-    <task id="LOCAL-00034" summary="avoid dup logs">
-      <option name="closed" value="true" />
-      <created>1746176567860</created>
-      <option name="number" value="00034" />
-      <option name="presentableId" value="LOCAL-00034" />
-      <option name="project" value="LOCAL" />
-      <updated>1746176567860</updated>
-    </task>
-    <task id="LOCAL-00035" summary="add logs">
-      <option name="closed" value="true" />
-      <created>1746177156259</created>
-      <option name="number" value="00035" />
-      <option name="presentableId" value="LOCAL-00035" />
-      <option name="project" value="LOCAL" />
-      <updated>1746177156259</updated>
     </task>
     <task id="LOCAL-00036" summary="םfix logs">
       <option name="closed" value="true" />
@@ -488,7 +462,31 @@
       <option name="project" value="LOCAL" />
       <updated>1746186194170</updated>
     </task>
-    <option name="localTasksCounter" value="82" />
+    <task id="LOCAL-00082" summary="# ודא שהלוגר לא שולח ל-root logger&#10;logging.getLogger().handlers.clear()">
+      <option name="closed" value="true" />
+      <created>1746186839001</created>
+      <option name="number" value="00082" />
+      <option name="presentableId" value="LOCAL-00082" />
+      <option name="project" value="LOCAL" />
+      <updated>1746186839001</updated>
+    </task>
+    <task id="LOCAL-00083" summary="remove logging.getLogger().handlers.clear()">
+      <option name="closed" value="true" />
+      <created>1746186921709</created>
+      <option name="number" value="00083" />
+      <option name="presentableId" value="LOCAL-00083" />
+      <option name="project" value="LOCAL" />
+      <updated>1746186921709</updated>
+    </task>
+    <task id="LOCAL-00084" summary="logger_initialized">
+      <option name="closed" value="true" />
+      <created>1746187059209</created>
+      <option name="number" value="00084" />
+      <option name="presentableId" value="LOCAL-00084" />
+      <option name="project" value="LOCAL" />
+      <updated>1746187059210</updated>
+    </task>
+    <option name="localTasksCounter" value="85" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -525,6 +523,9 @@
     <MESSAGE value="st.write(st.session_state)" />
     <MESSAGE value="some" />
     <MESSAGE value="logger" />
-    <option name="LAST_COMMIT_MESSAGE" value="logger" />
+    <MESSAGE value="# ודא שהלוגר לא שולח ל-root logger&#10;logging.getLogger().handlers.clear()" />
+    <MESSAGE value="remove logging.getLogger().handlers.clear()" />
+    <MESSAGE value="logger_initialized" />
+    <option name="LAST_COMMIT_MESSAGE" value="logger_initialized" />
   </component>
 </project>
