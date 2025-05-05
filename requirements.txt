@@ -6,3 +6,4 @@ requests==2.32.3
 dotenv~=0.9.9
 beautifulsoup4~=4.13.4
 playwright~=1.52.0
+bcrypt~=4.3.0

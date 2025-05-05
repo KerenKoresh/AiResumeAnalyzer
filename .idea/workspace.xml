@@ -4,8 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="807201ae-ee64-4ca6-9628-3d677c5c95ca" name="Changes" comment="TestPDFUtils">
-      <change afterPath="$PROJECT_DIR$/users.db" afterDir="false" />
+    <list default="true" id="807201ae-ee64-4ca6-9628-3d677c5c95ca" name="Changes" comment="db">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -55,6 +54,7 @@
     "Python tests.Python tests in test_match_analysis.py.executor": "Run",
     "Python tests.Python tests in test_openai_utils.py.executor": "Run",
     "Python tests.Python tests in test_pdf_utils.py.executor": "Run",
+    "Python.app.executor": "Run",
     "Python.linkedin_utils.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
@@ -74,7 +74,29 @@
       <recent name="$PROJECT_DIR$/src" />
     </key>
   </component>
-  <component name="RunManager" selected="Python tests.Python tests in test_pdf_utils.py">
+  <component name="RunManager" selected="Python.app">
+    <configuration name="app" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="AIResumeAnalyzer" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/app.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="AIResumeAnalyzer" />
       <option name="ENV_FILES" value="" />
@@ -127,21 +149,6 @@
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Python tests in test_logging_utils.py" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
-      <module name="AIResumeAnalyzer" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;$PROJECT_DIR$/tests/test_logging_utils.py&quot;" />
-      <option name="_new_targetType" value="&quot;PATH&quot;" />
-      <method v="2" />
-    </configuration>
     <configuration name="Python tests in test_openai_utils.py" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="AIResumeAnalyzer" />
       <option name="ENV_FILES" value="" />
@@ -174,11 +181,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.app" />
         <item itemvalue="Python tests.Python tests in test_pdf_utils.py" />
         <item itemvalue="Python tests.Python tests in test_openai_utils.py" />
         <item itemvalue="Python tests.Python tests for test_openai_utils.TestOpenAIUtils" />
         <item itemvalue="Python tests.Python tests for test_openai_utils.TestOpenAIUtils.test_get_match_analysis" />
-        <item itemvalue="Python tests.Python tests in test_logging_utils.py" />
       </list>
     </recent_temporary>
   </component>
@@ -197,14 +204,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1745908845465</updated>
-    </task>
-    <task id="LOCAL-00057" summary="clean handlers">
-      <option name="closed" value="true" />
-      <created>1746181545827</created>
-      <option name="number" value="00057" />
-      <option name="presentableId" value="LOCAL-00057" />
-      <option name="project" value="LOCAL" />
-      <updated>1746181545827</updated>
     </task>
     <task id="LOCAL-00058" summary="clean handlers">
       <option name="closed" value="true" />
@@ -590,7 +589,15 @@
       <option name="project" value="LOCAL" />
       <updated>1746434933400</updated>
     </task>
-    <option name="localTasksCounter" value="106" />
+    <task id="LOCAL-00106" summary="db">
+      <option name="closed" value="true" />
+      <created>1746436167773</created>
+      <option name="number" value="00106" />
+      <option name="presentableId" value="LOCAL-00106" />
+      <option name="project" value="LOCAL" />
+      <updated>1746436167773</updated>
+    </task>
+    <option name="localTasksCounter" value="107" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -605,7 +612,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="general fixes" />
     <MESSAGE value="init_logger" />
     <MESSAGE value="clean handlers" />
     <MESSAGE value="setdefault" />
@@ -630,7 +636,8 @@
     <MESSAGE value="unit tests - TestLoggingUtils" />
     <MESSAGE value="TestOpenAIUtils" />
     <MESSAGE value="TestPDFUtils" />
-    <option name="LAST_COMMIT_MESSAGE" value="TestPDFUtils" />
+    <MESSAGE value="db" />
+    <option name="LAST_COMMIT_MESSAGE" value="db" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
