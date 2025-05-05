@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="807201ae-ee64-4ca6-9628-3d677c5c95ca" name="Changes" comment="use_container_width" />
+    <list default="true" id="807201ae-ee64-4ca6-9628-3d677c5c95ca" name="Changes" comment="remove login db" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -203,22 +203,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1745908845465</updated>
-    </task>
-    <task id="LOCAL-00064" summary="setdefault">
-      <option name="closed" value="true" />
-      <created>1746182215823</created>
-      <option name="number" value="00064" />
-      <option name="presentableId" value="LOCAL-00064" />
-      <option name="project" value="LOCAL" />
-      <updated>1746182215823</updated>
-    </task>
-    <task id="LOCAL-00065" summary="setdefault">
-      <option name="closed" value="true" />
-      <created>1746182273402</created>
-      <option name="number" value="00065" />
-      <option name="presentableId" value="LOCAL-00065" />
-      <option name="project" value="LOCAL" />
-      <updated>1746182273403</updated>
     </task>
     <task id="LOCAL-00066" summary="setdefault">
       <option name="closed" value="true" />
@@ -596,7 +580,23 @@
       <option name="project" value="LOCAL" />
       <updated>1746437814041</updated>
     </task>
-    <option name="localTasksCounter" value="113" />
+    <task id="LOCAL-00113" summary="Cannot find reference 'experimental_rerun' in '__init__.py'">
+      <option name="closed" value="true" />
+      <created>1746438493728</created>
+      <option name="number" value="00113" />
+      <option name="presentableId" value="LOCAL-00113" />
+      <option name="project" value="LOCAL" />
+      <updated>1746438493728</updated>
+    </task>
+    <task id="LOCAL-00114" summary="remove login db">
+      <option name="closed" value="true" />
+      <created>1746438711863</created>
+      <option name="number" value="00114" />
+      <option name="presentableId" value="LOCAL-00114" />
+      <option name="project" value="LOCAL" />
+      <updated>1746438711864</updated>
+    </task>
+    <option name="localTasksCounter" value="115" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -611,8 +611,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="st.write(st.session_state)" />
-    <MESSAGE value="some" />
     <MESSAGE value="logger" />
     <MESSAGE value="# ודא שהלוגר לא שולח ל-root logger&#10;logging.getLogger().handlers.clear()" />
     <MESSAGE value="remove logging.getLogger().handlers.clear()" />
@@ -636,7 +634,9 @@
     <MESSAGE value="register_user" />
     <MESSAGE value="pages" />
     <MESSAGE value="use_container_width" />
-    <option name="LAST_COMMIT_MESSAGE" value="use_container_width" />
+    <MESSAGE value="Cannot find reference 'experimental_rerun' in '__init__.py'" />
+    <MESSAGE value="remove login db" />
+    <option name="LAST_COMMIT_MESSAGE" value="remove login db" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

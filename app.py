@@ -1,24 +1,30 @@
-
 import streamlit as st
 from pages import home, analyze
 
+PAGES = {
+    "home": home,
+    "analyze": analyze,
+}
 
-# הגדרת תפריט ניווט
 def main():
     st.set_page_config(page_title="AI Resume Analyzer", layout="centered")
 
-    # תפריט ניווט בין הדפים
-    pages = {
-        "Home": home,
-        "Analyze": analyze,
-    }
+    # קריאת הפרמטרים מה-URL
+    query_params = st.query_params
+    page = query_params.get("page", "home").lower()
 
-    # הצגת הבחירה של המשתמש בתפריט
-    page = st.sidebar.selectbox("Choose a page", list(pages.keys()))
+    # תפריט ניווט בצד
+    with st.sidebar:
+        st.markdown("## 📂 Menu")
+        st.page_link("app.py", label="🏠 Home", params={"page": "home"})
+        st.page_link("app.py", label="📄 Analyze Resume", params={"page": "analyze"})
 
-    # קריאה לדף המתאים לפי הבחירה
-    pages[page].run()
+    if page not in PAGES:
+        st.error("Page not found.")
+        return
 
+    # הצגת הדף הרלוונטי
+    PAGES[page].run()
 
 if __name__ == "__main__":
     main()
