@@ -31,8 +31,20 @@ def get_match_analysis(resume_text, job_description):
             ],
             temperature=0.3
         )
-        logger.info("🔔 Analysis completed by OpenAI API.")
-        return response.choices[0].message["content"]
+
+        print(response)  # הדפסה לעזור לך לראות את התשובה המתקבלת
+
+        # אם התגובה מכילה את המפתח 'choices' ומבנה התשובה לא תקין
+        if 'choices' not in response or len(response['choices']) == 0:
+            logger.error(f"Unexpected response format: {response}")
+            raise KeyError("The response does not contain expected 'choices' key.")
+
+        # אם כל המפתחות קיימים ומבנה התשובה תקין
+        return response['choices'][0]['message']['content']
+
+    except KeyError as ke:
+        logger.error(f"KeyError: {ke}")
+        raise ke  # זרוק את השגיאה
     except Exception as e:
         logger.error(f"Error with OpenAI API: {e}")
         raise e

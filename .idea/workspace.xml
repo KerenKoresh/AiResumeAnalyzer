@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="807201ae-ee64-4ca6-9628-3d677c5c95ca" name="Changes" comment="unit tests - test_email_utils.py">
-      <change afterPath="$PROJECT_DIR$/tests/test_logging_utils.py" afterDir="false" />
+    <list default="true" id="807201ae-ee64-4ca6-9628-3d677c5c95ca" name="Changes" comment="unit tests - TestLoggingUtils">
+      <change afterPath="$PROJECT_DIR$/tests/test_openai_utils.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/logging_utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/logging_utils.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/openai_utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/openai_utils.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,10 +48,13 @@
     "Python tests.Python tests for test_match_analysis.TestMatchAnalysis.test_analyze_match.executor": "Run",
     "Python tests.Python tests for test_match_analysis.TestMatchAnalysis.test_analyze_match_exception.executor": "Run",
     "Python tests.Python tests for test_match_analysis.TestMatchAnalysis.test_analyze_match_success.executor": "Debug",
+    "Python tests.Python tests for test_openai_utils.TestOpenAIUtils.executor": "Run",
+    "Python tests.Python tests for test_openai_utils.TestOpenAIUtils.test_get_match_analysis.executor": "Run",
     "Python tests.Python tests in test_email_utils.py.executor": "Run",
     "Python tests.Python tests in test_logger.py.executor": "Run",
     "Python tests.Python tests in test_logging_utils.py.executor": "Run",
     "Python tests.Python tests in test_match_analysis.py.executor": "Run",
+    "Python tests.Python tests in test_openai_utils.py.executor": "Run",
     "Python.linkedin_utils.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
@@ -71,7 +74,7 @@
       <recent name="$PROJECT_DIR$/src" />
     </key>
   </component>
-  <component name="RunManager" selected="Python tests.Python tests in test_logging_utils.py">
+  <component name="RunManager" selected="Python tests.Python tests in test_openai_utils.py">
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="AIResumeAnalyzer" />
       <option name="ENV_FILES" value="" />
@@ -94,21 +97,6 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="Python tests for test_logger.TestLogger.test_add_betterstack_handler_called_once" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
-      <module name="AIResumeAnalyzer" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_logger.TestLogger.test_add_betterstack_handler_called_once&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
-      <method v="2" />
-    </configuration>
     <configuration name="Python tests for test_logging_utils.TestLoggingUtils.test_add_betterstack_handler" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="AIResumeAnalyzer" />
       <option name="ENV_FILES" value="" />
@@ -124,7 +112,7 @@
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Python tests in test_email_utils.py" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+    <configuration name="Python tests for test_openai_utils.TestOpenAIUtils" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="AIResumeAnalyzer" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -135,11 +123,11 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;$PROJECT_DIR$/tests/test_email_utils.py&quot;" />
-      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <option name="_new_target" value="&quot;test_openai_utils.TestOpenAIUtils&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Python tests in test_logger.py" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+    <configuration name="Python tests for test_openai_utils.TestOpenAIUtils.test_get_match_analysis" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="AIResumeAnalyzer" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -150,8 +138,8 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;$PROJECT_DIR$/tests/test_logger.py&quot;" />
-      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <option name="_new_target" value="&quot;test_openai_utils.TestOpenAIUtils.test_get_match_analysis&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
     <configuration name="Python tests in test_logging_utils.py" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
@@ -169,13 +157,28 @@
       <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method v="2" />
     </configuration>
+    <configuration name="Python tests in test_openai_utils.py" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="AIResumeAnalyzer" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/tests/test_openai_utils.py&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python tests.Python tests in test_openai_utils.py" />
+        <item itemvalue="Python tests.Python tests for test_openai_utils.TestOpenAIUtils" />
+        <item itemvalue="Python tests.Python tests for test_openai_utils.TestOpenAIUtils.test_get_match_analysis" />
         <item itemvalue="Python tests.Python tests in test_logging_utils.py" />
         <item itemvalue="Python tests.Python tests for test_logging_utils.TestLoggingUtils.test_add_betterstack_handler" />
-        <item itemvalue="Python tests.Python tests in test_email_utils.py" />
-        <item itemvalue="Python tests.Python tests in test_logger.py" />
-        <item itemvalue="Python tests.Python tests for test_logger.TestLogger.test_add_betterstack_handler_called_once" />
       </list>
     </recent_temporary>
   </component>
@@ -194,14 +197,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1745908845465</updated>
-    </task>
-    <task id="LOCAL-00054" summary="clean handlers">
-      <option name="closed" value="true" />
-      <created>1746181080604</created>
-      <option name="number" value="00054" />
-      <option name="presentableId" value="LOCAL-00054" />
-      <option name="project" value="LOCAL" />
-      <updated>1746181080604</updated>
     </task>
     <task id="LOCAL-00055" summary="clean handlers">
       <option name="closed" value="true" />
@@ -587,7 +582,15 @@
       <option name="project" value="LOCAL" />
       <updated>1746432166152</updated>
     </task>
-    <option name="localTasksCounter" value="103" />
+    <task id="LOCAL-00103" summary="unit tests - TestLoggingUtils">
+      <option name="closed" value="true" />
+      <created>1746432884627</created>
+      <option name="number" value="00103" />
+      <option name="presentableId" value="LOCAL-00103" />
+      <option name="project" value="LOCAL" />
+      <updated>1746432884628</updated>
+    </task>
+    <option name="localTasksCounter" value="104" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -602,7 +605,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="avoid dup logs" />
     <MESSAGE value="add logs" />
     <MESSAGE value="םfix logs" />
     <MESSAGE value="general fixes" />
@@ -627,6 +629,18 @@
     <MESSAGE value="remove  LinkedIn" />
     <MESSAGE value="unit tests" />
     <MESSAGE value="unit tests - test_email_utils.py" />
-    <option name="LAST_COMMIT_MESSAGE" value="unit tests - test_email_utils.py" />
+    <MESSAGE value="unit tests - TestLoggingUtils" />
+    <option name="LAST_COMMIT_MESSAGE" value="unit tests - TestLoggingUtils" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/tests/test_openai_utils.py</url>
+          <line>18</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
