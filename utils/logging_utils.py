@@ -8,6 +8,7 @@ load_dotenv()
 logger = logging.getLogger("AIResumeAnalyzer")
 
 
+
 class BetterStackHandler(logging.Handler):
     def __init__(self, source_token, host):
         super().__init__()
