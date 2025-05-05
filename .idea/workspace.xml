@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="807201ae-ee64-4ca6-9628-3d677c5c95ca" name="Changes" comment="remove login db">
-      <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
-    </list>
+    <list default="true" id="807201ae-ee64-4ca6-9628-3d677c5c95ca" name="Changes" comment="remove login db" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -205,22 +203,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1745908845465</updated>
-    </task>
-    <task id="LOCAL-00069" summary="setdefault">
-      <option name="closed" value="true" />
-      <created>1746182862230</created>
-      <option name="number" value="00069" />
-      <option name="presentableId" value="LOCAL-00069" />
-      <option name="project" value="LOCAL" />
-      <updated>1746182862230</updated>
-    </task>
-    <task id="LOCAL-00070" summary="setdefault">
-      <option name="closed" value="true" />
-      <created>1746183040588</created>
-      <option name="number" value="00070" />
-      <option name="presentableId" value="LOCAL-00070" />
-      <option name="project" value="LOCAL" />
-      <updated>1746183040588</updated>
     </task>
     <task id="LOCAL-00071" summary="setdefault">
       <option name="closed" value="true" />
@@ -598,7 +580,23 @@
       <option name="project" value="LOCAL" />
       <updated>1746439468899</updated>
     </task>
-    <option name="localTasksCounter" value="118" />
+    <task id="LOCAL-00118" summary="remove login db">
+      <option name="closed" value="true" />
+      <created>1746439573666</created>
+      <option name="number" value="00118" />
+      <option name="presentableId" value="LOCAL-00118" />
+      <option name="project" value="LOCAL" />
+      <updated>1746439573667</updated>
+    </task>
+    <task id="LOCAL-00119" summary="remove login db">
+      <option name="closed" value="true" />
+      <created>1746439638784</created>
+      <option name="number" value="00119" />
+      <option name="presentableId" value="LOCAL-00119" />
+      <option name="project" value="LOCAL" />
+      <updated>1746439638784</updated>
+    </task>
+    <option name="localTasksCounter" value="120" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
