@@ -21,6 +21,7 @@ def main():
     # Sidebar custom navigation - כאן אנחנו רק מציגים את הדפים הביתיים
     with st.sidebar:
         st.markdown("## 📂 Navigation")
+        # תצוגת ניווט בעזרת st.radio
         page = st.radio(
             "Choose a page:",
             options=["Home", "Analyze Resume"]
