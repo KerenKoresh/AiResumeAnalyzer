@@ -1,10 +1,17 @@
 import streamlit as st
+import base64
 from pages import home, analyze
 
 PAGES = {
     "Home": home,
     "Analyze Resume": analyze,
 }
+
+# פונקציה שממירה לוגו ל-base64
+def get_base64_image(image_path):
+    with open(image_path, "rb") as img_file:
+        encoded = base64.b64encode(img_file.read()).decode()
+    return f"data:image/png;base64,{encoded}"
 
 def main():
     st.set_page_config(page_title="AI Resume Analyzer", layout="centered")
@@ -19,9 +26,10 @@ def main():
     """, unsafe_allow_html=True)
 
     # 🔝 בר עליון עם לוגו ושם האפליקציה
-    st.markdown("""
+    logo_base64 = get_base64_image("assets/logo.png")  # ודאי שהנתיב נכון
+    st.markdown(f"""
         <div style="display: flex; align-items: center; gap: 15px; padding: 10px 0 20px;">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/1/1b/AI_Logo.png" width="36" height="36" style="border-radius: 5px;">
+            <img src="{logo_base64}" width="36" height="36" style="border-radius: 5px;">
             <h1 style="margin: 0; font-size: 24px;">AI Resume Analyzer</h1>
         </div>
     """, unsafe_allow_html=True)
