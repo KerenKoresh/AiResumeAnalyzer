@@ -1,7 +1,7 @@
 import streamlit as st
 from pages import home, analyze
 
-# הגדרת הדפים
+# הגדרת הדפים שברצונך להציג בלבד
 PAGES = {
     "home": home,
     "analyze": analyze,
@@ -21,7 +21,7 @@ def main():
     # קריאה מה-URL
     page = st.query_params.get("page", "home").lower()
 
-    # Sidebar custom navigation - נעלים את האפשרויות הלא רצויות
+    # Sidebar custom navigation
     with st.sidebar:
         st.markdown("## 📂 Navigation")
         st.markdown(f"""
