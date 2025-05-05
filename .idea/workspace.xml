@@ -204,38 +204,6 @@
       <option name="presentableId" value="Default" />
       <updated>1745908845465</updated>
     </task>
-    <task id="LOCAL-00081" summary="logger">
-      <option name="closed" value="true" />
-      <created>1746186194170</created>
-      <option name="number" value="00081" />
-      <option name="presentableId" value="LOCAL-00081" />
-      <option name="project" value="LOCAL" />
-      <updated>1746186194170</updated>
-    </task>
-    <task id="LOCAL-00082" summary="# ודא שהלוגר לא שולח ל-root logger&#10;logging.getLogger().handlers.clear()">
-      <option name="closed" value="true" />
-      <created>1746186839001</created>
-      <option name="number" value="00082" />
-      <option name="presentableId" value="LOCAL-00082" />
-      <option name="project" value="LOCAL" />
-      <updated>1746186839001</updated>
-    </task>
-    <task id="LOCAL-00083" summary="remove logging.getLogger().handlers.clear()">
-      <option name="closed" value="true" />
-      <created>1746186921709</created>
-      <option name="number" value="00083" />
-      <option name="presentableId" value="LOCAL-00083" />
-      <option name="project" value="LOCAL" />
-      <updated>1746186921709</updated>
-    </task>
-    <task id="LOCAL-00084" summary="logger_initialized">
-      <option name="closed" value="true" />
-      <created>1746187059209</created>
-      <option name="number" value="00084" />
-      <option name="presentableId" value="LOCAL-00084" />
-      <option name="project" value="LOCAL" />
-      <updated>1746187059210</updated>
-    </task>
     <task id="LOCAL-00085" summary="logger_initialized">
       <option name="closed" value="true" />
       <created>1746187186893</created>
@@ -596,7 +564,39 @@
       <option name="project" value="LOCAL" />
       <updated>1746440635720</updated>
     </task>
-    <option name="localTasksCounter" value="130" />
+    <task id="LOCAL-00130" summary="header">
+      <option name="closed" value="true" />
+      <created>1746449429055</created>
+      <option name="number" value="00130" />
+      <option name="presentableId" value="LOCAL-00130" />
+      <option name="project" value="LOCAL" />
+      <updated>1746449429055</updated>
+    </task>
+    <task id="LOCAL-00131" summary="header">
+      <option name="closed" value="true" />
+      <created>1746449504255</created>
+      <option name="number" value="00131" />
+      <option name="presentableId" value="LOCAL-00131" />
+      <option name="project" value="LOCAL" />
+      <updated>1746449504255</updated>
+    </task>
+    <task id="LOCAL-00132" summary="header">
+      <option name="closed" value="true" />
+      <created>1746449624738</created>
+      <option name="number" value="00132" />
+      <option name="presentableId" value="LOCAL-00132" />
+      <option name="project" value="LOCAL" />
+      <updated>1746449624739</updated>
+    </task>
+    <task id="LOCAL-00133" summary="header">
+      <option name="closed" value="true" />
+      <created>1746449673937</created>
+      <option name="number" value="00133" />
+      <option name="presentableId" value="LOCAL-00133" />
+      <option name="project" value="LOCAL" />
+      <updated>1746449673937</updated>
+    </task>
+    <option name="localTasksCounter" value="134" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
