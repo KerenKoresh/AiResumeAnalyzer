@@ -1,5 +1,6 @@
+# app.py
 import streamlit as st
-from pages import home, analyze
+from pages import home, analyze  # או מהשם של התיקייה החדשה שתקרא לה "modules" למשל
 
 PAGES = {
     "home": home,
@@ -9,26 +10,20 @@ PAGES = {
 def main():
     st.set_page_config(page_title="AI Resume Analyzer", layout="centered")
 
-    # קריאה מה-URL
-    page = st.query_params.get("page", "home").lower()
+    query_params = st.query_params
+    page = query_params.get("page", "home").lower()
 
-    # Sidebar custom navigation
     with st.sidebar:
-        st.markdown("## 📂 Navigation")
+        st.markdown("## 📂 ניווט")
         st.markdown(f"""
-            <a href='?page=home' style='text-decoration: none;'>
-                🏠 Home
-            </a><br>
-            <a href='?page=analyze' style='text-decoration: none;'>
-                📄 Analyze Resume
-            </a>
+            <a href='?page=home' style='text-decoration: none;'>🏠 דף הבית</a><br>
+            <a href='?page=analyze' style='text-decoration: none;'>📄 ניתוח קורות חיים</a>
         """, unsafe_allow_html=True)
 
-    # Load page
     if page in PAGES:
         PAGES[page].run()
     else:
-        st.error("Page not found.")
+        st.error("⚠️ העמוד לא נמצא.")
 
 if __name__ == "__main__":
     main()
