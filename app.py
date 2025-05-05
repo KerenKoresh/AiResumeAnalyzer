@@ -25,12 +25,12 @@ def main():
         </style>
     """, unsafe_allow_html=True)
 
-    # 🔝 בר עליון עם לוגו ושם האפליקציה
+    # 🔝 בר עליון עם לוגו מוגדל ושם האפליקציה
     logo_base64 = get_base64_image("assets/logo.png")  # ודאי שהנתיב נכון
     st.markdown(f"""
-        <div style="display: flex; align-items: center; gap: 15px; padding: 10px 0 20px;">
-            <img src="{logo_base64}" width="36" height="36" style="border-radius: 5px;">
-            <h1 style="margin: 0; font-size: 24px;">AI Resume Analyzer</h1>
+        <div style="display: flex; align-items: center; gap: 20px; padding: 10px 0 30px;">
+            <img src="{logo_base64}" width="64" height="64" style="border-radius: 10px;">
+            <h1 style="margin: 0; font-size: 32px;">AI Resume Analyzer</h1>
         </div>
     """, unsafe_allow_html=True)
 
