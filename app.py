@@ -1,6 +1,6 @@
 
 import streamlit as st
-from pages import home, login, register, analyze, settings
+from pages import home, analyze
 
 
 # הגדרת תפריט ניווט
@@ -10,10 +10,7 @@ def main():
     # תפריט ניווט בין הדפים
     pages = {
         "Home": home,
-        "Login": login,
-        "Register": register,
         "Analyze": analyze,
-        "Settings": settings,
     }
 
     # הצגת הבחירה של המשתמש בתפריט
