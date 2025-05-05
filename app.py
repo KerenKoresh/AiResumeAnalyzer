@@ -29,7 +29,7 @@ def main():
     logo_base64 = get_base64_image("assets/logo.png")  # ודאי שהנתיב נכון
     st.markdown(f"""
         <div style="display: flex; align-items: center; gap: 20px; padding: 10px 0 30px;">
-            <img src="{logo_base64}" width="64" height="64" style="border-radius: 10px;">
+            <img src="{logo_base64}" width="90" height="64" style="border-radius: 10px;">
             <h1 style="margin: 0; font-size: 32px;">AI Resume Analyzer</h1>
         </div>
     """, unsafe_allow_html=True)
