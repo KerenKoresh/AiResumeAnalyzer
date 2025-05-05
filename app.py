@@ -18,27 +18,19 @@ def main():
         </div>
     """, unsafe_allow_html=True)
 
-    # Sidebar custom navigation
+    # Sidebar custom navigation - כאן אנחנו רק מציגים את הדפים הביתיים
     with st.sidebar:
         st.markdown("## 📂 Navigation")
-        # שמות הדפים הרצויים בלבד
-        st.markdown(f"""
-            <a href='?page=home' style='text-decoration: none; font-size: 16px;'>
-                🏠 Home
-            </a><br>
-            <a href='?page=analyze' style='text-decoration: none; font-size: 16px;'>
-                📄 Analyze Resume
-            </a>
-        """, unsafe_allow_html=True)
+        page = st.radio(
+            "Choose a page:",
+            options=["Home", "Analyze Resume"]
+        )
 
-    # קריאה מה-URL (שימוש ב-experimental_get_query_params)
-    page = st.experimental_get_query_params().get("page", ["home"])[0].lower()
-
-    # טוען את הדף המתאים לפי ה-URL
-    if page in PAGES:
-        PAGES[page].run()
-    else:
-        st.error("Page not found.")
+    # טעינת הדף המתאים לפי הבחירה
+    if page == "Home":
+        PAGES["home"].run()
+    elif page == "Analyze Resume":
+        PAGES["analyze"].run()
 
 if __name__ == "__main__":
     main()
