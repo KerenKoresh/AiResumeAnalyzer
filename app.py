@@ -18,9 +18,6 @@ def main():
         </div>
     """, unsafe_allow_html=True)
 
-    # קריאה מה-URL
-    page = st.query_params.get("page", "home").lower()
-
     # Sidebar custom navigation - מציג רק את הניווט הרצוי
     with st.sidebar:
         st.markdown("## 📂 Navigation")
@@ -32,6 +29,9 @@ def main():
                 📄 Analyze Resume
             </a>
         """, unsafe_allow_html=True)
+
+    # קריאה מה-URL עם ערך ברירת מחדל
+    page = st.experimental_get_query_params().get("page", ["home"])[0].lower()
 
     # טוען את הדף המתאים לפי ה-URL
     if page in PAGES:

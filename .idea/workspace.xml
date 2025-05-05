@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="807201ae-ee64-4ca6-9628-3d677c5c95ca" name="Changes" comment="remove login db" />
+    <list default="true" id="807201ae-ee64-4ca6-9628-3d677c5c95ca" name="Changes" comment="header" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -203,38 +203,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1745908845465</updated>
-    </task>
-    <task id="LOCAL-00071" summary="setdefault">
-      <option name="closed" value="true" />
-      <created>1746183114689</created>
-      <option name="number" value="00071" />
-      <option name="presentableId" value="LOCAL-00071" />
-      <option name="project" value="LOCAL" />
-      <updated>1746183114689</updated>
-    </task>
-    <task id="LOCAL-00072" summary="st.write(st.session_state)">
-      <option name="closed" value="true" />
-      <created>1746183249174</created>
-      <option name="number" value="00072" />
-      <option name="presentableId" value="LOCAL-00072" />
-      <option name="project" value="LOCAL" />
-      <updated>1746183249174</updated>
-    </task>
-    <task id="LOCAL-00073" summary="st.write(st.session_state)">
-      <option name="closed" value="true" />
-      <created>1746183493865</created>
-      <option name="number" value="00073" />
-      <option name="presentableId" value="LOCAL-00073" />
-      <option name="project" value="LOCAL" />
-      <updated>1746183493865</updated>
-    </task>
-    <task id="LOCAL-00074" summary="st.write(st.session_state)">
-      <option name="closed" value="true" />
-      <created>1746183555553</created>
-      <option name="number" value="00074" />
-      <option name="presentableId" value="LOCAL-00074" />
-      <option name="project" value="LOCAL" />
-      <updated>1746183555554</updated>
     </task>
     <task id="LOCAL-00075" summary="st.write(st.session_state)">
       <option name="closed" value="true" />
@@ -596,7 +564,39 @@
       <option name="project" value="LOCAL" />
       <updated>1746439638784</updated>
     </task>
-    <option name="localTasksCounter" value="120" />
+    <task id="LOCAL-00120" summary="header">
+      <option name="closed" value="true" />
+      <created>1746440012154</created>
+      <option name="number" value="00120" />
+      <option name="presentableId" value="LOCAL-00120" />
+      <option name="project" value="LOCAL" />
+      <updated>1746440012154</updated>
+    </task>
+    <task id="LOCAL-00121" summary="header">
+      <option name="closed" value="true" />
+      <created>1746440106888</created>
+      <option name="number" value="00121" />
+      <option name="presentableId" value="LOCAL-00121" />
+      <option name="project" value="LOCAL" />
+      <updated>1746440106888</updated>
+    </task>
+    <task id="LOCAL-00122" summary="header">
+      <option name="closed" value="true" />
+      <created>1746440171632</created>
+      <option name="number" value="00122" />
+      <option name="presentableId" value="LOCAL-00122" />
+      <option name="project" value="LOCAL" />
+      <updated>1746440171632</updated>
+    </task>
+    <task id="LOCAL-00123" summary="header">
+      <option name="closed" value="true" />
+      <created>1746440246854</created>
+      <option name="number" value="00123" />
+      <option name="presentableId" value="LOCAL-00123" />
+      <option name="project" value="LOCAL" />
+      <updated>1746440246854</updated>
+    </task>
+    <option name="localTasksCounter" value="124" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -611,7 +611,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="logger" />
     <MESSAGE value="# ודא שהלוגר לא שולח ל-root logger&#10;logging.getLogger().handlers.clear()" />
     <MESSAGE value="remove logging.getLogger().handlers.clear()" />
     <MESSAGE value="logger_initialized" />
@@ -636,7 +635,8 @@
     <MESSAGE value="use_container_width" />
     <MESSAGE value="Cannot find reference 'experimental_rerun' in '__init__.py'" />
     <MESSAGE value="remove login db" />
-    <option name="LAST_COMMIT_MESSAGE" value="remove login db" />
+    <MESSAGE value="header" />
+    <option name="LAST_COMMIT_MESSAGE" value="header" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
