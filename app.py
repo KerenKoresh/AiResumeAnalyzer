@@ -10,13 +10,20 @@ PAGES = {
 def main():
     st.set_page_config(page_title="AI Resume Analyzer", layout="centered")
 
+    # הצגת הבר העליון עם הלוגו ושם האפליקציה
+    st.markdown("""
+        <div style="display: flex; justify-content: space-between; align-items: center; padding: 10px; background-color: #f1f1f1;">
+            <img src="https://yourlogo.com/logo.png" alt="Logo" width="50">
+            <h1 style="margin: 0;">AI Resume Analyzer</h1>
+        </div>
+    """, unsafe_allow_html=True)
+
     # קריאה מה-URL
     page = st.query_params.get("page", "home").lower()
 
-    # Sidebar custom navigation
+    # Sidebar custom navigation - נעלים את האפשרויות הלא רצויות
     with st.sidebar:
         st.markdown("## 📂 Navigation")
-        # רק הוספתי את האפשרויות המתאימות (לא app, analyze, home או init)
         st.markdown(f"""
             <a href='?page=home' style='text-decoration: none; font-size: 16px;'>
                 🏠 Home
@@ -26,7 +33,7 @@ def main():
             </a>
         """, unsafe_allow_html=True)
 
-    # Load page based on URL parameter
+    # טוען את הדף המתאים לפי ה-URL
     if page in PAGES:
         PAGES[page].run()
     else:
