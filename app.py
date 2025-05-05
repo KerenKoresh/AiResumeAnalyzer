@@ -9,7 +9,6 @@ import sqlite3
 # Creating a specific logger for the application
 logger = logging.getLogger("AIResumeAnalyzer")
 
-
 # Initialize the session state for login status
 def setup():
     """Initializes UI and logger."""
@@ -130,7 +129,7 @@ def main():
                 st.session_state["logged_in"] = True
                 st.session_state["email"] = email
                 st.success("Successfully logged in.")
-                # No need for rerun, the session_state update will trigger the UI update
+                # After successful login, session_state update will automatically trigger UI change
             else:
                 st.error("Invalid email or password.")
 
@@ -140,7 +139,7 @@ def main():
                 st.success("Registration successful! You are now logged in.")
                 st.session_state["logged_in"] = True
                 st.session_state["email"] = register_email
-                # No need for rerun, the session_state update will trigger the UI update
+                # After successful registration, session_state update will automatically trigger UI change
             else:
                 st.error("Please provide both email and password for registration.")
 
