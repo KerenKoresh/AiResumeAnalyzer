@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="807201ae-ee64-4ca6-9628-3d677c5c95ca" name="Changes" comment="unit tests">
-      <change afterPath="$PROJECT_DIR$/tests/test_email_utils.py" afterDir="false" />
+    <list default="true" id="807201ae-ee64-4ca6-9628-3d677c5c95ca" name="Changes" comment="unit tests - test_email_utils.py">
+      <change afterPath="$PROJECT_DIR$/tests/test_logging_utils.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/logging_utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/logging_utils.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,11 +44,13 @@
     "Python tests.Python tests for test_logger.TestLogger.test_add_betterstack_handler_called_once.executor": "Run",
     "Python tests.Python tests for test_logger.TestLogger.test_logger_initialization.executor": "Run",
     "Python tests.Python tests for test_logger.TestLoggerReal.test_logger_adds_handler.executor": "Run",
+    "Python tests.Python tests for test_logging_utils.TestLoggingUtils.test_add_betterstack_handler.executor": "Run",
     "Python tests.Python tests for test_match_analysis.TestMatchAnalysis.test_analyze_match.executor": "Run",
     "Python tests.Python tests for test_match_analysis.TestMatchAnalysis.test_analyze_match_exception.executor": "Run",
     "Python tests.Python tests for test_match_analysis.TestMatchAnalysis.test_analyze_match_success.executor": "Debug",
     "Python tests.Python tests in test_email_utils.py.executor": "Run",
     "Python tests.Python tests in test_logger.py.executor": "Run",
+    "Python tests.Python tests in test_logging_utils.py.executor": "Run",
     "Python tests.Python tests in test_match_analysis.py.executor": "Run",
     "Python.linkedin_utils.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
@@ -68,7 +71,7 @@
       <recent name="$PROJECT_DIR$/src" />
     </key>
   </component>
-  <component name="RunManager" selected="Python tests.Python tests in test_email_utils.py">
+  <component name="RunManager" selected="Python tests.Python tests in test_logging_utils.py">
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="AIResumeAnalyzer" />
       <option name="ENV_FILES" value="" />
@@ -91,21 +94,6 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="Python tests for test_logger.TestLoggerReal.test_logger_adds_handler" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
-      <module name="AIResumeAnalyzer" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_logger.TestLoggerReal.test_logger_adds_handler&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
-      <method v="2" />
-    </configuration>
     <configuration name="Python tests for test_logger.TestLogger.test_add_betterstack_handler_called_once" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="AIResumeAnalyzer" />
       <option name="ENV_FILES" value="" />
@@ -121,7 +109,7 @@
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Python tests for test_logger.TestLogger.test_logger_initialization" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+    <configuration name="Python tests for test_logging_utils.TestLoggingUtils.test_add_betterstack_handler" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="AIResumeAnalyzer" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -132,7 +120,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_logger.TestLogger.test_logger_initialization&quot;" />
+      <option name="_new_target" value="&quot;test_logging_utils.TestLoggingUtils.test_add_betterstack_handler&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
@@ -166,13 +154,28 @@
       <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method v="2" />
     </configuration>
+    <configuration name="Python tests in test_logging_utils.py" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="AIResumeAnalyzer" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/tests/test_logging_utils.py&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python tests.Python tests in test_logging_utils.py" />
+        <item itemvalue="Python tests.Python tests for test_logging_utils.TestLoggingUtils.test_add_betterstack_handler" />
         <item itemvalue="Python tests.Python tests in test_email_utils.py" />
         <item itemvalue="Python tests.Python tests in test_logger.py" />
         <item itemvalue="Python tests.Python tests for test_logger.TestLogger.test_add_betterstack_handler_called_once" />
-        <item itemvalue="Python tests.Python tests for test_logger.TestLoggerReal.test_logger_adds_handler" />
-        <item itemvalue="Python tests.Python tests for test_logger.TestLogger.test_logger_initialization" />
       </list>
     </recent_temporary>
   </component>
@@ -191,14 +194,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1745908845465</updated>
-    </task>
-    <task id="LOCAL-00053" summary="clean handlers">
-      <option name="closed" value="true" />
-      <created>1746180874756</created>
-      <option name="number" value="00053" />
-      <option name="presentableId" value="LOCAL-00053" />
-      <option name="project" value="LOCAL" />
-      <updated>1746180874756</updated>
     </task>
     <task id="LOCAL-00054" summary="clean handlers">
       <option name="closed" value="true" />
@@ -584,7 +579,15 @@
       <option name="project" value="LOCAL" />
       <updated>1746431736670</updated>
     </task>
-    <option name="localTasksCounter" value="102" />
+    <task id="LOCAL-00102" summary="unit tests - test_email_utils.py">
+      <option name="closed" value="true" />
+      <created>1746432166152</created>
+      <option name="number" value="00102" />
+      <option name="presentableId" value="LOCAL-00102" />
+      <option name="project" value="LOCAL" />
+      <updated>1746432166152</updated>
+    </task>
+    <option name="localTasksCounter" value="103" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -599,7 +602,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="fix logs" />
     <MESSAGE value="avoid dup logs" />
     <MESSAGE value="add logs" />
     <MESSAGE value="םfix logs" />
@@ -624,6 +626,7 @@
     <MESSAGE value="add  LinkedIn" />
     <MESSAGE value="remove  LinkedIn" />
     <MESSAGE value="unit tests" />
-    <option name="LAST_COMMIT_MESSAGE" value="unit tests" />
+    <MESSAGE value="unit tests - test_email_utils.py" />
+    <option name="LAST_COMMIT_MESSAGE" value="unit tests - test_email_utils.py" />
   </component>
 </project>

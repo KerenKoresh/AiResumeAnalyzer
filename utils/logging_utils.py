@@ -18,7 +18,9 @@ class BetterStackHandler(logging.Handler):
     def emit(self, record):
         log_entry = self.format(record)
         try:
-            requests.post(
+            # Debugging output
+            print(f"Emitting log: {log_entry}")  # Debug print
+            response = requests.post(
                 self.host,
                 headers={
                     "Content-Type": "application/json",
@@ -26,8 +28,9 @@ class BetterStackHandler(logging.Handler):
                 },
                 json={"message": log_entry}
             )
+            print(f"Response status code: {response.status_code}")  # Debug print
         except Exception as e:
-            logging.error(f"Failed to send log to BetterStack: {e}")
+            print(f"Failed to send log to BetterStack: {e}")  # Debug print
 
 
 def get_secret(key):
