@@ -16,6 +16,7 @@ def main():
     # Sidebar custom navigation
     with st.sidebar:
         st.markdown("## 📂 Navigation")
+        # רק הוספתי את האפשרויות המתאימות (לא app, analyze, home או init)
         st.markdown(f"""
             <a href='?page=home' style='text-decoration: none; font-size: 16px;'>
                 🏠 Home
