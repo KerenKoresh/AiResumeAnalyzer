@@ -204,14 +204,6 @@
       <option name="presentableId" value="Default" />
       <updated>1745908845465</updated>
     </task>
-    <task id="LOCAL-00066" summary="setdefault">
-      <option name="closed" value="true" />
-      <created>1746182400389</created>
-      <option name="number" value="00066" />
-      <option name="presentableId" value="LOCAL-00066" />
-      <option name="project" value="LOCAL" />
-      <updated>1746182400389</updated>
-    </task>
     <task id="LOCAL-00067" summary="setdefault">
       <option name="closed" value="true" />
       <created>1746182472658</created>
@@ -596,7 +588,15 @@
       <option name="project" value="LOCAL" />
       <updated>1746438711864</updated>
     </task>
-    <option name="localTasksCounter" value="115" />
+    <task id="LOCAL-00115" summary="remove login db">
+      <option name="closed" value="true" />
+      <created>1746438997498</created>
+      <option name="number" value="00115" />
+      <option name="presentableId" value="LOCAL-00115" />
+      <option name="project" value="LOCAL" />
+      <updated>1746438997499</updated>
+    </task>
+    <option name="localTasksCounter" value="116" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">

@@ -9,22 +9,26 @@ PAGES = {
 def main():
     st.set_page_config(page_title="AI Resume Analyzer", layout="centered")
 
-    # קריאת הפרמטרים מה-URL
-    query_params = st.query_params
-    page = query_params.get("page", "home").lower()
+    # קריאה מה-URL
+    page = st.query_params.get("page", "home").lower()
 
-    # תפריט ניווט בצד
+    # Sidebar custom navigation
     with st.sidebar:
-        st.markdown("## 📂 Menu")
-        st.page_link("app.py", label="🏠 Home", params={"page": "home"})
-        st.page_link("app.py", label="📄 Analyze Resume", params={"page": "analyze"})
+        st.markdown("## 📂 Navigation")
+        st.markdown(f"""
+            <a href='?page=home' style='text-decoration: none;'>
+                🏠 Home
+            </a><br>
+            <a href='?page=analyze' style='text-decoration: none;'>
+                📄 Analyze Resume
+            </a>
+        """, unsafe_allow_html=True)
 
-    if page not in PAGES:
+    # Load page
+    if page in PAGES:
+        PAGES[page].run()
+    else:
         st.error("Page not found.")
-        return
-
-    # הצגת הדף הרלוונטי
-    PAGES[page].run()
 
 if __name__ == "__main__":
     main()
