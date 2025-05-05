@@ -21,7 +21,7 @@ def main():
     # קריאה מה-URL
     page = st.query_params.get("page", "home").lower()
 
-    # Sidebar custom navigation
+    # Sidebar custom navigation - מציג רק את הניווט הרצוי
     with st.sidebar:
         st.markdown("## 📂 Navigation")
         st.markdown(f"""
