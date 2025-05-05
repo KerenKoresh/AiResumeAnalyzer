@@ -57,9 +57,21 @@ def register_user(email, password):
     """Registers a new user and adds them to the database."""
     conn = sqlite3.connect('users.db')
     c = conn.cursor()
-    c.execute("INSERT INTO users (email, password) VALUES (?, ?)", (email, password))
-    conn.commit()
-    conn.close()
+
+    # יצירת הטבלה אם היא לא קיימת
+    c.execute('''CREATE TABLE IF NOT EXISTS users (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        email TEXT UNIQUE NOT NULL,
+        password TEXT NOT NULL
+    )''')
+
+    try:
+        c.execute("INSERT INTO users (email, password) VALUES (?, ?)", (email, password))
+        conn.commit()
+    except sqlite3.IntegrityError:
+        st.error("Email already exists. Please try another email.")
+    finally:
+        conn.close()
 
 
 def logout_user():
