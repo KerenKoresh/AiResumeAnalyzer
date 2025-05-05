@@ -1,37 +1,42 @@
 import streamlit as st
 from pages import home, analyze
 
-# הגדרת הדפים שברצונך להציג
 PAGES = {
-    "home": home,
-    "analyze": analyze,
+    "Home": home,
+    "Analyze Resume": analyze,
 }
 
 def main():
     st.set_page_config(page_title="AI Resume Analyzer", layout="centered")
 
-    # הצגת בר עליון עם הלוגו ושם האפליקציה
+    # 🧼 הסתרת תפריט הניווט האוטומטי של Streamlit
     st.markdown("""
-        <div style="display: flex; justify-content: space-between; align-items: center; padding: 10px; background-color: #f1f1f1;">
-            <img src="https://yourlogo.com/logo.png" alt="Logo" width="50">
-            <h1 style="margin: 0;">AI Resume Analyzer</h1>
+        <style>
+        [data-testid="stSidebarNav"] {
+            display: none;
+        }
+        </style>
+    """, unsafe_allow_html=True)
+
+    # 🔝 בר עליון עם לוגו ושם האפליקציה
+    st.markdown("""
+        <div style="display: flex; align-items: center; gap: 10px; padding: 10px 0;">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/1/1b/AI_Logo.png" width="40">
+            <h2 style="margin: 0;">AI Resume Analyzer</h2>
         </div>
     """, unsafe_allow_html=True)
 
-    # Sidebar custom navigation - כאן אנחנו רק מציגים את הדפים הביתיים
+    # 📂 תפריט צד מותאם
     with st.sidebar:
         st.markdown("## 📂 Navigation")
-        # תצוגת ניווט בעזרת st.radio
         page = st.radio(
-            "Choose a page:",
-            options=["Home", "Analyze Resume"]
+            "",  # בלי כותרת מעל
+            list(PAGES.keys()),
+            index=0,
         )
 
-    # טעינת הדף המתאים לפי הבחירה
-    if page == "Home":
-        PAGES["home"].run()
-    elif page == "Analyze Resume":
-        PAGES["analyze"].run()
+    # טעינת הדף המתאים
+    PAGES[page].run()
 
 if __name__ == "__main__":
     main()
