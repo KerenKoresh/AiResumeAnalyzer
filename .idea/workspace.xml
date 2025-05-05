@@ -4,19 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="807201ae-ee64-4ca6-9628-3d677c5c95ca" name="Changes" comment="register_user">
-      <change afterPath="$PROJECT_DIR$/assets/logo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/analyze.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/home.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/login.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/register.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/settings.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/utils/analysis_utils.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/utils/auth_utils.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
-    </list>
+    <list default="true" id="807201ae-ee64-4ca6-9628-3d677c5c95ca" name="Changes" comment="use_container_width" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -215,22 +203,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1745908845465</updated>
-    </task>
-    <task id="LOCAL-00062" summary="setdefault">
-      <option name="closed" value="true" />
-      <created>1746182090406</created>
-      <option name="number" value="00062" />
-      <option name="presentableId" value="LOCAL-00062" />
-      <option name="project" value="LOCAL" />
-      <updated>1746182090406</updated>
-    </task>
-    <task id="LOCAL-00063" summary="setdefault">
-      <option name="closed" value="true" />
-      <created>1746182145479</created>
-      <option name="number" value="00063" />
-      <option name="presentableId" value="LOCAL-00063" />
-      <option name="project" value="LOCAL" />
-      <updated>1746182145479</updated>
     </task>
     <task id="LOCAL-00064" summary="setdefault">
       <option name="closed" value="true" />
@@ -608,7 +580,23 @@
       <option name="project" value="LOCAL" />
       <updated>1746437012857</updated>
     </task>
-    <option name="localTasksCounter" value="111" />
+    <task id="LOCAL-00111" summary="pages">
+      <option name="closed" value="true" />
+      <created>1746437749199</created>
+      <option name="number" value="00111" />
+      <option name="presentableId" value="LOCAL-00111" />
+      <option name="project" value="LOCAL" />
+      <updated>1746437749199</updated>
+    </task>
+    <task id="LOCAL-00112" summary="use_container_width">
+      <option name="closed" value="true" />
+      <created>1746437814041</created>
+      <option name="number" value="00112" />
+      <option name="presentableId" value="LOCAL-00112" />
+      <option name="project" value="LOCAL" />
+      <updated>1746437814041</updated>
+    </task>
+    <option name="localTasksCounter" value="113" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -623,8 +611,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="clean handlers" />
-    <MESSAGE value="setdefault" />
     <MESSAGE value="st.write(st.session_state)" />
     <MESSAGE value="some" />
     <MESSAGE value="logger" />
@@ -648,7 +634,9 @@
     <MESSAGE value="TestPDFUtils" />
     <MESSAGE value="db" />
     <MESSAGE value="register_user" />
-    <option name="LAST_COMMIT_MESSAGE" value="register_user" />
+    <MESSAGE value="pages" />
+    <MESSAGE value="use_container_width" />
+    <option name="LAST_COMMIT_MESSAGE" value="use_container_width" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

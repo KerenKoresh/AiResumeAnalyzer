@@ -1,5 +1,20 @@
 import sqlite3
 
+
+def create_users_table():
+    conn = sqlite3.connect("users.db")
+    c = conn.cursor()
+    c.execute("""
+        CREATE TABLE IF NOT EXISTS users (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            email TEXT UNIQUE NOT NULL,
+            password TEXT NOT NULL
+        )
+    """)
+    conn.commit()
+    conn.close()
+
+
 def login_user(email, password):
     conn = sqlite3.connect('users.db')
     c = conn.cursor()
@@ -7,6 +22,7 @@ def login_user(email, password):
     user = c.fetchone()
     conn.close()
     return user is not None
+
 
 def register_user(email, password):
     conn = sqlite3.connect('users.db')
